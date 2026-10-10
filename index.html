@@ -230,6 +230,34 @@ nav{position:sticky}
 
 @media (prefers-reduced-motion:reduce){.card,.chain li,.result.fresh tbody tr{transition:none;animation:none}}
 
+/* contact assistant */
+.contact-intro{display:flex;flex-direction:column;gap:14px;align-self:start}
+.contact-intro p{margin:0}
+.li-link{color:#6FD3C7;font-family:var(--mono);font-size:14px;text-decoration:none}
+.li-link:hover{text-decoration:underline}
+.chat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:16px;display:flex;flex-direction:column;min-height:380px;overflow:hidden}
+.chat-head{display:flex;gap:10px;align-items:center;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.1)}
+.chat-head .dot{width:10px;height:10px;border-radius:50%;background:#6FD3C7;box-shadow:0 0 0 4px rgba(111,211,199,.18)}
+.chat-head b{display:block;font-size:14px;color:var(--console-fg)}
+.chat-head small{font-family:var(--mono);font-size:11px;color:var(--console-dim)}
+.chat-log{flex:1;display:flex;flex-direction:column;gap:10px;padding:16px;overflow-y:auto;max-height:340px}
+.msg{max-width:85%;padding:10px 14px;border-radius:14px;font-size:14.5px;line-height:1.5;overflow-wrap:anywhere;white-space:pre-wrap}
+.msg.bot{background:rgba(255,255,255,.08);color:var(--console-fg);border-bottom-left-radius:4px;align-self:flex-start}
+.msg.me{background:#6FD3C7;color:#08161C;border-bottom-right-radius:4px;align-self:flex-end}
+.msg.typing{color:var(--console-dim);font-family:var(--mono);font-size:13px}
+.chat-input{padding:12px 14px;border-top:1px solid rgba(255,255,255,.1)}
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choices button,.chat-input .send,.chat-input .ghost{font-family:var(--mono);font-size:12.5px;padding:8px 13px;border-radius:999px;border:1px solid rgba(111,211,199,.5);background:transparent;color:#6FD3C7;cursor:pointer}
+.choices button:hover,.chat-input .ghost:hover{background:rgba(111,211,199,.12)}
+.chat-input form{display:flex;gap:8px;align-items:flex-end}
+.chat-input input,.chat-input textarea{flex:1;min-width:0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);color:var(--console-fg);border-radius:12px;padding:10px 12px;font:inherit;font-size:14.5px;resize:none}
+.chat-input input:focus,.chat-input textarea:focus{outline:none;border-color:#6FD3C7}
+.chat-input .send{background:#6FD3C7;color:#08161C;border-color:#6FD3C7;font-weight:500}
+.chat-input .err{color:#F0B866;font-size:12.5px;margin-top:6px;font-family:var(--mono)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;background:var(--accent);color:var(--bg);font-weight:600;font-size:14px;text-decoration:none;box-shadow:0 12px 30px -12px rgba(10,60,60,.6)}
+.fab svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
 @media (max-width:860px){.hero{grid-template-columns:1fr}}
 @media (prefers-reduced-motion:no-preference){
   .hero>*{animation:rise .6s ease both}.hero>*:nth-child(2){animation-delay:.12s}
@@ -485,31 +513,36 @@ nav{position:sticky}
 
     <section id="contact" style="padding-top:0">
       <div class="contact">
-        <div>
+        <div class="contact-intro">
           <h2>Let's build something.</h2>
-          <p>Open to conversations about Salesforce FSC, OmniStudio and Agentforce work.</p>
+          <p>Hiring for Salesforce FSC, OmniStudio or Agentforce, or have a project in mind? Tell my assistant what you need and it lands straight in my inbox. I usually reply within a day or two.</p>
+          <a class="li-link" href="https://www.linkedin.com/in/tarun-sharma-973a08200" target="_blank" rel="noopener">Or message me on LinkedIn ↗</a>
         </div>
-        <div class="rows">
-          <div class="row"><div><small>Email</small><span id="email">tarunsharma06120@gmail.com</span></div><button type="button" data-copy="email">Copy</button></div>
-          <div class="row"><div><small>Phone</small><span id="phone">+91 79763 37010</span></div><button type="button" data-copy="phone">Copy</button></div>
-          <div class="row"><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/tarun-sharma-973a08200" target="_blank" rel="noopener">tarun-sharma-973a08200 ↗</a></div></div>
+        <div class="chat" id="chat" aria-label="Contact assistant">
+          <div class="chat-head"><span class="dot"></span><div><b>Tarun's assistant</b><small>Sends your message to Tarun</small></div></div>
+          <div class="chat-log" id="chatLog" aria-live="polite">
+            <div class="msg bot">Hi! I pass messages on to Tarun. What brings you here?</div>
+          </div>
+          <div class="chat-input" id="chatInput">
+            <div class="choices">
+              <button type="button" data-topic="Job opportunity">Job opportunity</button>
+              <button type="button" data-topic="Freelance or project work">Freelance / project</button>
+              <button type="button" data-topic="Salesforce question or collaboration">Salesforce question</button>
+              <button type="button" data-topic="Just saying hi">Just saying hi</button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
   </div>
 </main>
 
+<a class="fab" href="#contact" id="fab"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Message me</a>
+
 <footer><div class="wrap"><span>© 2026 Tarun Sharma</span><span>India</span></div></footer>
 
 <script>
-document.querySelectorAll('[data-copy]').forEach(function(btn){
-  btn.addEventListener('click',function(){
-    var el=document.getElementById(btn.dataset.copy), text=el.textContent;
-    function done(){btn.textContent='Copied';setTimeout(function(){btn.textContent='Copy'},1600)}
-    function fallback(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);btn.textContent='Selected'}
-    try{navigator.clipboard.writeText(text).then(done,fallback)}catch(e){fallback()}
-  });
-});
+
 
 /* theme toggle */
 (function(){
@@ -566,6 +599,81 @@ document.querySelectorAll('[data-copy]').forEach(function(btn){
     cur=b.dataset.q; render(cur);
   })});
   document.getElementById('runBtn').addEventListener('click',function(){render(cur)});
+})();
+
+/* contact assistant: collects an enquiry and sends it via Web3Forms */
+(function(){
+  var WEB3FORMS_KEY = "b83d4cba-2e1b-47c9-be3f-9daa29274351";
+  var log=document.getElementById('chatLog'), box=document.getElementById('chatInput');
+  var data={topic:'',name:'',company:'',message:'',email:''};
+  function add(text,who){var d=document.createElement('div');d.className='msg '+who;d.textContent=text;log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
+  function bot(text,next){var t=add('typing…','bot typing');setTimeout(function(){t.remove();add(text,'bot');if(next)next()},500)}
+  function ask(opts){
+    box.innerHTML='';
+    var f=document.createElement('form'), el=document.createElement(opts.multi?'textarea':'input');
+    el.id='chatField'; el.setAttribute('aria-label',opts.label); el.placeholder=opts.placeholder||'';
+    if(opts.multi) el.rows=3; else el.type=opts.type||'text';
+    var send=document.createElement('button'); send.type='submit'; send.className='send'; send.textContent='Send';
+    f.appendChild(el); f.appendChild(send); box.appendChild(f);
+    if(opts.skip){var s=document.createElement('button');s.type='button';s.className='ghost';s.textContent='Skip';s.style.marginTop='8px';
+      s.onclick=function(){add('Skipped','me');opts.done('')};box.appendChild(s)}
+    var err=document.createElement('div'); err.className='err'; box.appendChild(err);
+    el.focus({preventScroll:true});
+    if(opts.multi) el.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();f.requestSubmit()}});
+    f.addEventListener('submit',function(e){e.preventDefault();var v=el.value.trim();
+      var problem=opts.validate?opts.validate(v):(!v?'Please type an answer first.':'');
+      if(problem){err.textContent=problem;return}
+      add(v,'me'); opts.done(v)});
+  }
+  function choices(list,done){
+    box.innerHTML='';var c=document.createElement('div');c.className='choices';
+    list.forEach(function(item){var b=document.createElement('button');b.type='button';b.textContent=item.label;b.onclick=function(){add(item.label,'me');done(item.value)};c.appendChild(b)});
+    box.appendChild(c);
+  }
+  function start(topic){
+    data.topic=topic;
+    bot('Great. What is your name?',function(){ask({label:'Your name',placeholder:'Your name',done:function(v){data.name=v;
+      if(topic==='Job opportunity'||topic==='Freelance or project work'){
+        bot('Thanks, '+v.split(' ')[0]+'. Which company or team are you with?',function(){ask({label:'Company',placeholder:'Company (optional)',skip:true,validate:function(){return ''},done:function(c){data.company=c;askDetails()}})});
+      } else askDetails();
+    }})});
+  }
+  function askDetails(){
+    var prompt={'Job opportunity':'Tell me about the role: title, location or remote, and anything else Tarun should know.',
+      'Freelance or project work':'What is the project? A line or two on scope and timeline helps.',
+      'Salesforce question or collaboration':'What would you like to ask or work on together?',
+      'Just saying hi':'Go ahead, what would you like to tell Tarun?'}[data.topic];
+    bot(prompt,function(){ask({label:'Your message',placeholder:'Type your message',multi:true,done:function(v){data.message=v;askEmail()}})});
+  }
+  function askEmail(){
+    bot('Which email should Tarun reply to?',function(){ask({label:'Your email',type:'email',placeholder:'you@company.com',
+      validate:function(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)?'':'That email does not look right. Please check it.'},
+      done:function(v){data.email=v;confirmSend()}})});
+  }
+  function confirmSend(){
+    var summary='Here is what I will send:\n\nTopic: '+data.topic+'\nName: '+data.name+(data.company?'\nCompany: '+data.company:'')+'\nEmail: '+data.email+'\n\n'+data.message;
+    bot(summary,function(){choices([{label:'Send to Tarun',value:'send'},{label:'Start over',value:'restart'}],function(v){
+      if(v==='restart'){log.innerHTML='';data={topic:'',name:'',company:'',message:'',email:''};add('Hi! I pass messages on to Tarun. What brings you here?','bot');showTopics();}
+      else send();
+    })});
+  }
+  function send(){
+    box.innerHTML='';
+    var t=add('Sending…','bot typing');
+    if(WEB3FORMS_KEY.indexOf('PASTE_')===0){t.remove();bot('This preview is not connected to email yet, so nothing was sent. Please reach Tarun on LinkedIn for now.');return}
+    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({access_key:WEB3FORMS_KEY,subject:'Portfolio enquiry: '+data.topic+' from '+data.name,from_name:'Portfolio assistant',
+        name:data.name,email:data.email,company:data.company||'-',topic:data.topic,message:data.message,botcheck:''})})
+    .then(function(r){return r.json()}).then(function(res){t.remove();
+      if(res.success) bot('Sent! Tarun will reply to '+data.email+' soon. Thanks for reaching out.');
+      else bot('Sorry, the message did not go through. Please try again in a minute or message Tarun on LinkedIn.',function(){choices([{label:'Try again',value:1}],send)});
+    }).catch(function(){t.remove();bot('I could not reach the mail service. Check your connection and try again, or message Tarun on LinkedIn.',function(){choices([{label:'Try again',value:1}],send)})});
+  }
+  function showTopics(){
+    choices([{label:'Job opportunity',value:'Job opportunity'},{label:'Freelance / project',value:'Freelance or project work'},
+      {label:'Salesforce question',value:'Salesforce question or collaboration'},{label:'Just saying hi',value:'Just saying hi'}],start);
+  }
+  box.querySelectorAll('[data-topic]').forEach(function(b){b.onclick=function(){add(b.textContent,'me');start(b.dataset.topic)}});
 })();
 </script>
 

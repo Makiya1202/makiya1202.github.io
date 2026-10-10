@@ -275,6 +275,40 @@ nav{position:sticky}
 @keyframes pop{from{transform:scale(.4)}to{transform:scale(1)}}
 @keyframes draw{to{stroke-dashoffset:0}}
 @media (prefers-reduced-motion:reduce){.sent,.sent .tick{animation:none}.sent .tick path{animation:none;stroke-dashoffset:0}}
+/* courier lane */
+.lane{position:relative;height:210px;overflow:hidden;margin-top:24px;border-top:1px solid var(--line)}
+.road{position:absolute;left:0;right:0;bottom:22px;height:2px;background:repeating-linear-gradient(90deg,var(--line) 0 18px,transparent 18px 32px)}
+.sign{position:absolute;right:clamp(16px,6vw,72px);bottom:24px;display:flex;flex-direction:column;align-items:center}
+.sign span{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:5px 9px;white-space:nowrap}
+.sign span::after{content:" →";color:var(--accent)}
+.sign i{display:block;width:3px;height:34px;background:var(--line)}
+.courier{position:absolute;left:0;bottom:14px;width:80px;transform:translateX(var(--x,120px));will-change:transform}
+.dude{width:80px;height:124px;display:block;overflow:visible}
+.dude .shadow{fill:var(--fg);opacity:.12}
+.dude .legL,.dude .legR,.dude .armF,.dude .armB{transform-box:fill-box}
+.dude .legL,.dude .legR{transform-origin:50% 0}
+.dude .armF,.dude .armB{transform-origin:50% 8%}
+.dude .envelope{opacity:0;transition:opacity .25s}
+.courier.carrying .envelope{opacity:1}
+.dude .eyes{transform-box:fill-box;transform-origin:center;animation:blink 4.5s infinite}
+.courier.walking .legL{animation:stepA .42s ease-in-out infinite alternate}
+.courier.walking .legR{animation:stepB .42s ease-in-out infinite alternate}
+.courier.walking .armB{animation:stepA .42s ease-in-out infinite alternate}
+.courier.walking:not(.carrying) .armF{animation:stepB .42s ease-in-out infinite alternate}
+.courier.walking .bodyG{animation:bob .21s ease-in-out infinite alternate}
+.courier.waving .armF{animation:wave .6s ease-in-out 3 alternate}
+@keyframes stepA{from{transform:rotate(22deg)}to{transform:rotate(-22deg)}}
+@keyframes stepB{from{transform:rotate(-22deg)}to{transform:rotate(22deg)}}
+@keyframes bob{from{transform:translateY(0)}to{transform:translateY(-2.5px)}}
+@keyframes wave{from{transform:rotate(-10deg)}to{transform:rotate(-150deg)}}
+@keyframes blink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
+.bubble{position:absolute;bottom:128px;left:-6px;width:max-content;max-width:min(280px,calc(100vw - 48px));background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:14px;padding:10px 13px;font-size:14px;line-height:1.45;box-shadow:0 12px 28px -18px rgba(10,40,50,.45);display:flex;flex-direction:column;gap:8px;align-items:flex-start;transition:opacity .25s,transform .25s;transform-origin:20px 100%}
+.bubble::after{content:"";position:absolute;left:30px;bottom:-7px;width:12px;height:12px;background:var(--surface);border-right:1px solid var(--line);border-bottom:1px solid var(--line);transform:rotate(45deg)}
+.bubble.hide{opacity:0;transform:scale(.85);pointer-events:none}
+.bubble button{font-family:var(--mono);font-size:12px;padding:6px 12px;border-radius:999px;border:1px solid var(--accent);background:var(--accent);color:var(--bg);cursor:pointer}
+.bubble button[hidden]{display:none}
+@media (prefers-reduced-motion:reduce){.courier,.courier *{animation:none!important;transition:none!important}}
+
 .fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;background:var(--accent);color:var(--bg);font-weight:600;font-size:14px;text-decoration:none;box-shadow:0 12px 30px -12px rgba(10,60,60,.6)}
 .fab svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
@@ -559,6 +593,41 @@ nav{position:sticky}
 
 <a class="fab" href="#contact" id="fab"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Message me</a>
 
+<section class="lane" id="lane" aria-label="Message courier">
+  <div class="sign" aria-hidden="true"><span>Tarun's inbox</span><i></i></div>
+  <div class="road" aria-hidden="true"></div>
+  <div class="courier" id="courier">
+    <div class="bubble" id="bubble" role="status">
+      <span id="bubbleText">Hi! Want to reach Tarun? I'll carry your message.</span>
+      <button type="button" id="bubbleBtn">Write a message</button>
+    </div>
+    <svg class="dude" viewBox="0 0 80 124" aria-hidden="true">
+      <ellipse class="shadow" cx="40" cy="119" rx="20" ry="3.5"/>
+      <g class="legL"><rect x="31" y="84" width="8" height="26" rx="4" fill="#1F3A5F"/><rect x="29" y="106" width="12" height="7" rx="3.5" fill="#2B2B2B"/></g>
+      <g class="legR"><rect x="41" y="84" width="8" height="26" rx="4" fill="#1F3A5F"/><rect x="39" y="106" width="12" height="7" rx="3.5" fill="#2B2B2B"/></g>
+      <g class="bodyG">
+        <path d="M33 54 L58 86" stroke="#7A4A16" stroke-width="3"/>
+        <rect x="24" y="52" width="32" height="38" rx="12" fill="#0A6C6A"/>
+        <rect x="50" y="78" width="16" height="13" rx="3" fill="#C8892E"/><rect x="50" y="78" width="16" height="5" rx="2" fill="#A86F1F"/>
+        <g class="armB"><rect x="24" y="56" width="8" height="24" rx="4" fill="#08595A"/></g>
+        <g class="head">
+          <circle cx="40" cy="34" r="18" fill="#F2C29A"/>
+          <path d="M22 30 Q23 14 40 14 Q57 14 58 30 Z" fill="#0A6C6A"/>
+          <rect x="40" y="27" width="22" height="5" rx="2.5" fill="#08595A"/>
+          <circle cx="40" cy="17" r="2.5" fill="#F0B866"/>
+          <g class="eyes"><ellipse cx="34" cy="37" rx="2.4" ry="3" fill="#1A1A1A"/><ellipse cx="46" cy="37" rx="2.4" ry="3" fill="#1A1A1A"/></g>
+          <circle cx="30" cy="43" r="2.6" fill="#F29C8C" opacity=".7"/><circle cx="50" cy="43" r="2.6" fill="#F29C8C" opacity=".7"/>
+          <path d="M35 44 Q40 49 45 44" stroke="#7A3B2A" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </g>
+        <g class="armF">
+          <rect x="48" y="56" width="8" height="24" rx="4" fill="#0A6C6A"/>
+          <g class="envelope"><rect x="47" y="76" width="18" height="12" rx="1.5" fill="#FFFFFF" stroke="#C9D3DA"/><path d="M47.5 76.5 L56 83 L64.5 76.5" stroke="#9AA9B4" fill="none"/></g>
+        </g>
+      </g>
+    </svg>
+  </div>
+</section>
+
 <footer><div class="wrap"><span>© 2026 Tarun Sharma</span><span>India</span></div></footer>
 
 <script>
@@ -652,6 +721,7 @@ nav{position:sticky}
   }
   function start(topic){
     data.topic=topic;
+    if(window.courier) window.courier.say('Nice! Take your time, I will wait right here.');
     bot('Great. What is your name?',function(){ask({label:'Your name',placeholder:'Your name',done:function(v){data.name=v;
       if(topic==='Job opportunity'||topic==='Freelance or project work'){
         bot('Thanks, '+v.split(' ')[0]+'. Which company or team are you with?',function(){ask({label:'Company',placeholder:'Company (optional)',skip:true,validate:function(){return ''},done:function(c){data.company=c;askDetails()}})});
@@ -691,16 +761,19 @@ nav{position:sticky}
   }
 
   function reset(){
+    if(window.courier) window.courier.home();
     log.innerHTML='';data={topic:'',name:'',company:'',message:'',email:''};
     add('Hi! I pass messages on to Tarun. What brings you here?','bot');showTopics();
   }
+  window.portfolioChat={reset:function(){reset()}};
   function afterSend(){
     box.innerHTML='';var c=document.createElement('div');c.className='choices';
     var b=document.createElement('button');b.type='button';b.textContent='Send another message';b.onclick=reset;c.appendChild(b);box.appendChild(c);
   }
   function celebrate(){
-    afterSend();
     var chat=document.getElementById('chat'), first=data.name.split(' ')[0];
+    afterSend();
+    if(window.courier) window.courier.deliver(first);
     var o=document.createElement('div');o.className='sent';o.setAttribute('role','status');
     o.innerHTML='<canvas></canvas><div class="tick"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>'+
       '<h3></h3><p>Tarun will reply to <b></b>, usually within a day or two.</p>'+
@@ -731,6 +804,60 @@ nav{position:sticky}
       {label:'Salesforce question',value:'Salesforce question or collaboration'},{label:'Just saying hi',value:'Just saying hi'}],start);
   }
   box.querySelectorAll('[data-topic]').forEach(function(b){b.onclick=function(){add(b.textContent,'me');start(b.dataset.topic)}});
+})();
+
+/* courier: footer character that acts out the contact flow */
+(function(){
+  var lane=document.getElementById('lane'), c=document.getElementById('courier'),
+      bubble=document.getElementById('bubble'), txt=document.getElementById('bubbleText'), btn=document.getElementById('bubbleBtn');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches, busy=false, action='write';
+  function homeX(){return Math.max(16,Math.min(140,lane.offsetWidth*0.12))}
+  function setX(x,secs){c.style.transition=secs?'transform '+secs+'s linear':'none';c.style.setProperty('--x',x+'px')}
+  function say(text,btnLabel,act){txt.textContent=text;if(btnLabel){btn.textContent=btnLabel;btn.hidden=false;action=act}else btn.hidden=true;bubble.classList.remove('hide')}
+  function walkTo(x,done){
+    var cur=parseFloat(getComputedStyle(c).getPropertyValue('--x'))||homeX();
+    if(reduce){setX(x,0);done&&done();return}
+    var secs=Math.abs(x-cur)/130; c.classList.add('walking'); setX(x,secs);
+    setTimeout(function(){c.classList.remove('walking');done&&done()},secs*1000+30);
+  }
+  function wave(){c.classList.remove('waving');void c.offsetWidth;c.classList.add('waving')}
+  function goContact(){var s=document.getElementById('contact');s.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
+    setTimeout(function(){var b=document.querySelector('#chatInput button, #chatInput input, #chatInput textarea');if(b)b.focus({preventScroll:true})},500)}
+  btn.addEventListener('click',function(){
+    if(action==='again'&&window.portfolioChat) window.portfolioChat.reset();
+    goContact();
+  });
+  window.courier={
+    say:function(text){if(!busy) say(text)},
+    home:function(){if(!busy) say("Ready when you are. What should I carry to Tarun?")},
+    deliver:function(name){
+      busy=true; c.classList.add('carrying');
+      say('Got it'+(name?', '+name:'')+'! Delivering your message to Tarun now...');
+      setTimeout(function(){
+        bubble.classList.add('hide');
+        walkTo(lane.offsetWidth+100,function(){
+          c.classList.remove('carrying');
+          setX(-110,0);
+          setTimeout(function(){
+            walkTo(homeX(),function(){
+              busy=false; wave();
+              say('Delivered! Tarun has your message. Want to send another one?','Send another','again');
+            });
+          },700);
+        });
+      },1600);
+    }
+  };
+  setX(homeX(),0); setTimeout(wave,800);
+  addEventListener('resize',function(){if(!busy) setX(homeX(),0)});
+
+  /* hide the floating button while the contact area or courier is on screen */
+  var fab=document.getElementById('fab');
+  if('IntersectionObserver' in window && fab){
+    var vis=new Set();
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){e.isIntersecting?vis.add(e.target):vis.delete(e.target)});fab.hidden=vis.size>0},{threshold:0.15});
+    io.observe(document.getElementById('contact')); io.observe(lane);
+  }
 })();
 </script>
 

@@ -255,6 +255,26 @@ nav{position:sticky}
 .chat-input .send{background:#6FD3C7;color:#08161C;border-color:#6FD3C7;font-weight:500}
 .chat-input .err{color:#F0B866;font-size:12.5px;margin-top:6px;font-family:var(--mono)}
 .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.chat{position:relative}
+.chat-log{scrollbar-width:thin;scrollbar-color:rgba(111,211,199,.35) transparent}
+.chat-log::-webkit-scrollbar{width:6px}.chat-log::-webkit-scrollbar-track{background:transparent}
+.chat-log::-webkit-scrollbar-thumb{background:rgba(111,211,199,.35);border-radius:6px}
+.sent{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:28px;background:var(--console);border-radius:16px;animation:fadeIn .3s ease both}
+.sent canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.sent .tick{width:76px;height:76px;border-radius:50%;background:rgba(111,211,199,.14);display:grid;place-items:center;animation:pop .45s cubic-bezier(.2,1.4,.4,1) both}
+.sent .tick svg{width:40px;height:40px;fill:none;stroke:#6FD3C7;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.sent .tick path{stroke-dasharray:30;stroke-dashoffset:30;animation:draw .45s .25s ease forwards}
+.sent h3{font-family:var(--display);font-size:24px;font-weight:700;color:var(--console-fg);margin:6px 0 0}
+.sent p{margin:0;color:var(--console-dim);font-size:14.5px;max-width:32ch}
+.sent p b{color:var(--console-fg);font-weight:500;overflow-wrap:anywhere}
+.sent .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:10px}
+.sent .actions button{font-family:var(--mono);font-size:13px;padding:10px 16px;border-radius:999px;cursor:pointer;border:1px solid #6FD3C7}
+.sent .again{background:#6FD3C7;color:#08161C}
+.sent .close{background:transparent;color:#6FD3C7}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pop{from{transform:scale(.4)}to{transform:scale(1)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.sent,.sent .tick{animation:none}.sent .tick path{animation:none;stroke-dashoffset:0}}
 .fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:999px;background:var(--accent);color:var(--bg);font-weight:600;font-size:14px;text-decoration:none;box-shadow:0 12px 30px -12px rgba(10,60,60,.6)}
 .fab svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 
@@ -653,7 +673,7 @@ nav{position:sticky}
   function confirmSend(){
     var summary='Here is what I will send:\n\nTopic: '+data.topic+'\nName: '+data.name+(data.company?'\nCompany: '+data.company:'')+'\nEmail: '+data.email+'\n\n'+data.message;
     bot(summary,function(){choices([{label:'Send to Tarun',value:'send'},{label:'Start over',value:'restart'}],function(v){
-      if(v==='restart'){log.innerHTML='';data={topic:'',name:'',company:'',message:'',email:''};add('Hi! I pass messages on to Tarun. What brings you here?','bot');showTopics();}
+      if(v==='restart'){reset();}
       else send();
     })});
   }
@@ -665,9 +685,46 @@ nav{position:sticky}
       body:JSON.stringify({access_key:WEB3FORMS_KEY,subject:'Portfolio enquiry: '+data.topic+' from '+data.name,from_name:'Portfolio assistant',
         name:data.name,email:data.email,company:data.company||'-',topic:data.topic,message:data.message,botcheck:''})})
     .then(function(r){return r.json()}).then(function(res){t.remove();
-      if(res.success) bot('Sent! Tarun will reply to '+data.email+' soon. Thanks for reaching out.');
+      if(res.success){add('Sent! Tarun will reply to '+data.email+' soon.','bot');celebrate();}
       else bot('Sorry, the message did not go through. Please try again in a minute or message Tarun on LinkedIn.',function(){choices([{label:'Try again',value:1}],send)});
     }).catch(function(){t.remove();bot('I could not reach the mail service. Check your connection and try again, or message Tarun on LinkedIn.',function(){choices([{label:'Try again',value:1}],send)})});
+  }
+
+  function reset(){
+    log.innerHTML='';data={topic:'',name:'',company:'',message:'',email:''};
+    add('Hi! I pass messages on to Tarun. What brings you here?','bot');showTopics();
+  }
+  function afterSend(){
+    box.innerHTML='';var c=document.createElement('div');c.className='choices';
+    var b=document.createElement('button');b.type='button';b.textContent='Send another message';b.onclick=reset;c.appendChild(b);box.appendChild(c);
+  }
+  function celebrate(){
+    afterSend();
+    var chat=document.getElementById('chat'), first=data.name.split(' ')[0];
+    var o=document.createElement('div');o.className='sent';o.setAttribute('role','status');
+    o.innerHTML='<canvas></canvas><div class="tick"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>'+
+      '<h3></h3><p>Tarun will reply to <b></b>, usually within a day or two.</p>'+
+      '<div class="actions"><button type="button" class="again">Send another message</button><button type="button" class="close">Close</button></div>';
+    o.querySelector('h3').textContent='Thanks, '+first+'! Your message is on its way to Tarun Sharma.';
+    o.querySelector('b').textContent=data.email;
+    chat.appendChild(o);
+    o.querySelector('.again').onclick=function(){o.remove();reset()};
+    o.querySelector('.close').onclick=function(){o.remove()};
+    if(!matchMedia('(prefers-reduced-motion: reduce)').matches) confetti(o.querySelector('canvas'));
+  }
+  function confetti(cv){
+    var ctx=cv.getContext('2d'), dpr=window.devicePixelRatio||1, W=cv.offsetWidth, H=cv.offsetHeight;
+    cv.width=W*dpr; cv.height=H*dpr; ctx.scale(dpr,dpr);
+    var colors=['#6FD3C7','#F0B866','#E3EBF0','#4DC2B6','#E2A24A'], parts=[];
+    for(var i=0;i<110;i++){parts.push({x:W/2,y:H*0.38,vx:(Math.random()-.5)*9,vy:-Math.random()*9-3,r:Math.random()*4+3,
+      c:colors[i%colors.length],a:Math.random()*Math.PI,va:(Math.random()-.5)*.3,life:0})}
+    var start=performance.now();
+    (function frame(now){
+      var tt=now-start; ctx.clearRect(0,0,W,H);
+      parts.forEach(function(p){p.vy+=.22;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.a+=p.va;
+        ctx.save();ctx.globalAlpha=Math.max(0,1-tt/2200);ctx.translate(p.x,p.y);ctx.rotate(p.a);ctx.fillStyle=p.c;ctx.fillRect(-p.r/2,-p.r/4,p.r,p.r/2);ctx.restore()});
+      if(tt<2200) requestAnimationFrame(frame); else ctx.clearRect(0,0,W,H);
+    })(start);
   }
   function showTopics(){
     choices([{label:'Job opportunity',value:'Job opportunity'},{label:'Freelance / project',value:'Freelance or project work'},

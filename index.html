@@ -1,1247 +1,306 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Tarun Sharma is a Salesforce Developer in India with 4+ years of experience in Financial Services Cloud, OmniStudio, Agentforce, Apex and LWC. Five-time Salesforce certified.">
-<meta name="author" content="Tarun Sharma">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#0A6C6A">
-<meta name="application-name" content="Tarun Sharma">
-<meta property="og:site_name" content="Tarun Sharma">
-<link rel="canonical" href="https://tarunsharma06120.github.io/">
-<meta property="og:type" content="profile">
-<meta property="og:title" content="Tarun Sharma | Salesforce Developer">
-<meta property="og:description" content="Salesforce Developer: Financial Services Cloud, OmniStudio, Agentforce, Apex and LWC. Five-time Salesforce certified.">
-<meta property="og:url" content="https://tarunsharma06120.github.io/">
-<meta property="og:image" content="https://tarunsharma06120.github.io/og-image.png">
-<meta property="og:image:secure_url" content="https://tarunsharma06120.github.io/og-image.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="627">
-<meta property="og:image:alt" content="Tarun Sharma, Salesforce Developer, 5x Salesforce Certified">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://tarunsharma06120.github.io/og-image.png">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Tarun Sharma", "url": "https://tarunsharma06120.github.io/", "image": "https://tarunsharma06120.github.io/portrait.jpg", "jobTitle": "Salesforce Developer", "worksFor": {"@type": "Organization", "name": "Infosys"}, "address": {"@type": "PostalAddress", "addressCountry": "IN"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Sanskriti College"}, {"@type": "CollegeOrUniversity", "name": "University of Rajasthan"}], "award": "Employee of the Quarter, Metadologie (Apr-Jun 2023)", "knowsAbout": ["Salesforce", "Financial Services Cloud", "OmniStudio", "Agentforce", "Apex", "Lightning Web Components", "MuleSoft", "Java", "Spring Boot", "Commerce Cloud", "Service Cloud", "Sales Cloud", "Experience Cloud"], "sameAs": ["https://www.linkedin.com/in/tarun-sharma-973a08200", "https://github.com/tarunsharma06120", "https://www.salesforce.com/trailblazer/req2ypxan6kyw0dfmn"]}</script>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Tarun Sharma", "alternateName": ["Tarun Sharma Portfolio", "Tarun Sharma Salesforce Developer"], "url": "https://tarunsharma06120.github.io/"}</script>
-<title>Tarun Sharma | Salesforce Developer (FSC, OmniStudio, Agentforce)</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: a developer's org record. Query-console hero, dated timeline, work cards, grouped skills, cert grid. */
-:root{
-  --bg:#F2F5F7; --surface:#FFFFFF; --fg:#13222D; --muted:#5A6B77; --line:#D7DFE5;
-  --accent:#0A6C6A; --accent-soft:#DCEFEC; --amber:#B86E12;
-  --console:#10202A; --console-fg:#D9E6EC; --console-dim:#7F98A6;
-  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
-  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
-  --mono:"JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
-}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0D151B; --surface:#14202A; --fg:#E3EBF0; --muted:#93A6B3; --line:#24343F;
-  --accent:#4DC2B6; --accent-soft:#16332F; --amber:#E2A24A;
-  --console:#081016; --console-fg:#D9E6EC; --console-dim:#6F8796; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#0D151B; --surface:#14202A; --fg:#E3EBF0; --muted:#93A6B3; --line:#24343F;
-  --accent:#4DC2B6; --accent-soft:#16332F; --amber:#E2A24A;
-  --console:#081016; --console-fg:#D9E6EC; --console-dim:#6F8796; color-scheme:dark}
-
-*{box-sizing:border-box}
-body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-a{color:var(--accent)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
-.wrap{max-width:1080px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
-h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.08}
-.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
-
-/* nav */
-nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
-.logo{font-family:var(--mono);font-weight:500;font-size:14px;color:var(--fg);text-decoration:none}
-.logo span{color:var(--accent)}
-nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px}
-nav ul a{color:var(--muted);text-decoration:none}
-nav ul a:hover{color:var(--fg)}
-@media (max-width:640px){nav ul{display:none}}
-
-/* hero */
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,64px);align-items:center;padding-block:clamp(48px,8vw,96px) clamp(40px,6vw,72px)}
-.hero>*{min-width:0}
-.hero h1{font-size:clamp(44px,7.5vw,88px);font-weight:800;letter-spacing:-.03em}
-.hero h1 em{font-style:normal;color:var(--accent)}
-.role{font-family:var(--display);font-weight:500;font-size:clamp(19px,2.4vw,24px);margin:18px 0 0;color:var(--fg)}
-.lede{color:var(--muted);max-width:52ch;margin:16px 0 28px}
-.ctas{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font-weight:600;font-size:15px;text-decoration:none;border:1.5px solid var(--accent);transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn.primary{background:var(--accent);color:var(--bg)}
-.btn.ghost{color:var(--accent);background:transparent}
-.status{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12.5px;color:var(--muted);margin-bottom:22px}
-.status i{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
-
-/* portrait */
-.visual{position:relative;min-width:0;align-self:start}
-.portrait{margin:0;width:100%;max-width:100%;border-radius:22px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(10,40,50,.55)}
-.portrait img{width:100%;height:auto;display:block}
-.hero .console{margin-top:32px}
-@media (max-width:860px){.visual{order:-1;max-width:360px;width:100%;margin-inline:auto}}
-
-/* console */
-.console{background:var(--console);color:var(--console-fg);border-radius:14px;font-family:var(--mono);font-size:13px;line-height:1.7;overflow:hidden;box-shadow:0 24px 60px -30px rgba(10,30,40,.55)}
-.console header{display:flex;justify-content:space-between;align-items:center;padding:10px 16px;border-bottom:1px solid rgba(255,255,255,.08);color:var(--console-dim);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase}
-.console header b{display:flex;gap:6px}
-.console header b i{width:9px;height:9px;border-radius:50%;background:#2B3E4A}
-.console pre{margin:0;padding:18px 18px 8px;white-space:pre-wrap;word-break:break-word;font-family:inherit}
-.kw{color:#6FD3C7}.str{color:#F0B866}.cm{color:var(--console-dim)}
-.result{overflow-x:auto;padding:4px 18px 18px}
-.result table{border-collapse:collapse;width:100%;min-width:300px;font-size:12px}
-.result th{color:var(--console-dim);font-weight:400;text-align:left;padding:6px 10px 6px 0;border-bottom:1px solid rgba(255,255,255,.1)}
-.result td{padding:6px 10px 6px 0;font-variant-numeric:tabular-nums}
-.result tfoot td{color:var(--console-dim);border-top:1px solid rgba(255,255,255,.1);font-size:11.5px}
-
-/* stats strip */
-.strip{display:grid;grid-template-columns:repeat(3,1fr);border-block:1px solid var(--line)}
-.strip div{padding:22px 18px;border-left:1px solid var(--line)}
-.strip div:first-child{border-left:0;padding-left:0}
-.strip b{display:block;font-family:var(--display);font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
-.strip span{font-size:13.5px;color:var(--muted)}
-@media (max-width:480px){.strip{grid-template-columns:1fr}.strip div{border-left:0;padding-left:0}.strip div+div{border-top:1px solid var(--line)}}
-
-section{padding-block:clamp(56px,8vw,96px)}
-.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:36px;max-width:640px}
-.sec-head h2{font-size:clamp(30px,4.4vw,46px);font-weight:700;letter-spacing:-.02em}
-.sec-head p{color:var(--muted);margin:0}
-
-/* timeline */
-.timeline{list-style:none;margin:0;padding:0;display:grid;gap:0}
-.job{display:grid;grid-template-columns:180px 1fr;gap:28px;padding-block:28px;border-top:1px solid var(--line)}
-.job>*{min-width:0}
-.job .when{font-family:var(--mono);font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
-.job .when .now{display:inline-block;margin-top:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:3px 8px;border-radius:999px}
-.job h3{font-size:23px;font-weight:700}
-.job .org{color:var(--accent);font-weight:600;margin:4px 0 12px}
-.job ul{margin:0;padding-left:18px;color:var(--fg)}
-.job li{margin-bottom:6px}
-.job li::marker{color:var(--accent)}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
-.tags span{font-family:var(--mono);font-size:11.5px;padding:3px 9px;border:1px solid var(--line);border-radius:6px;color:var(--muted)}
-@media (max-width:640px){.job{grid-template-columns:1fr;gap:10px}}
-
-/* work */
-.work{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:10px;min-width:0}
-.card .kind{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.card h3{font-size:22px;font-weight:700}
-.card p{margin:0;color:var(--muted);font-size:15px}
-.card .metric{font-family:var(--display);font-weight:700;font-size:15px;color:var(--amber);margin-top:auto;padding-top:8px}
-.card.feature{grid-column:span 2;background:var(--accent-soft);border-color:transparent}
-.card.feature .metric{color:var(--accent)}
-@media (max-width:720px){.work{grid-template-columns:1fr}.card.feature{grid-column:auto}}
-
-/* skills */
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:28px 36px}
-.skills>div{min-width:0}
-.skills h3{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid var(--line)}
-.skills p{margin:0;font-size:15px;line-height:1.7}
-@media (max-width:860px){.skills{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:540px){.skills{grid-template-columns:1fr}}
-
-/* certs */
-.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;list-style:none;margin:0;padding:0}
-.certs li{display:flex;gap:14px;align-items:center;padding:16px 18px;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
-.certs .seal{flex:none;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:2px solid var(--accent);color:var(--accent);font-family:var(--mono);font-size:11px;font-weight:500}
-.certs b{display:block;font-size:15px;line-height:1.3}
-.certs small{color:var(--muted);font-size:12.5px}
-.honors{margin-top:18px;color:var(--muted);font-size:15px}
-@media (max-width:860px){.certs{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:540px){.certs{grid-template-columns:1fr}}
-
-/* contact */
-.contact{background:var(--console);color:var(--console-fg);border-radius:20px;padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end}
-.contact>*{min-width:0}
-.contact h2{font-size:clamp(32px,5vw,52px);font-weight:800;letter-spacing:-.02em;color:var(--console-fg)}
-.contact p{color:var(--console-dim);margin:14px 0 0}
-.rows{display:grid;gap:10px}
-.row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 16px;border:1px solid rgba(255,255,255,.12);border-radius:10px}
-.row div{min-width:0}
-.row small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--console-dim)}
-.row span,.row a{font-family:var(--mono);font-size:14px;color:var(--console-fg);user-select:all;overflow-wrap:anywhere;text-decoration:none}
-.row a{user-select:auto}
-.row button{flex:none;background:transparent;border:1px solid rgba(255,255,255,.2);color:var(--console-fg);font-family:var(--mono);font-size:12px;padding:6px 12px;border-radius:999px;cursor:pointer}
-.row button:hover{border-color:#6FD3C7;color:#6FD3C7}
-@media (max-width:760px){.contact{grid-template-columns:1fr}}
-
-footer{padding-block:32px;color:var(--muted);font-size:13px;font-family:var(--mono)}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-
-/* skill-approval chain inside a card */
-.chain{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;counter-reset:step}
-.chain li{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 12px 12px;min-width:0;counter-increment:step}
-.chain li::before{content:counter(step);display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--accent);color:var(--bg);font-family:var(--mono);font-size:11px;margin-bottom:6px}
-.chain b{display:block;font-size:14px;color:var(--fg)}
-.chain span{display:block;font-size:13px;color:var(--muted);line-height:1.45;margin-top:2px}
-@media (max-width:860px){.chain{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:420px){.chain{grid-template-columns:1fr}}
-
-/* clients */
-.clients{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);list-style:none;margin:0;padding:0}
-.clients li{padding:20px 18px 20px 0;border-bottom:1px solid var(--line);min-width:0}
-.clients b{display:block;font-family:var(--display);font-size:20px;font-weight:700;line-height:1.2}
-.clients span{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-@media (max-width:760px){.clients{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:420px){.clients{grid-template-columns:1fr}}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
-.chips span{font-family:var(--mono);font-size:13px;padding:6px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
-
-/* icons */
-.ico{width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);flex:none}
-.ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.card.feature .ico{background:var(--surface)}
-.card{transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
-.card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 18px 40px -28px rgba(10,60,60,.5)}
-.card[hidden]{display:none!important}
-.card-top{display:flex;align-items:center;justify-content:space-between;gap:12px}
-
-/* clients with icons */
-.clients li{display:flex;gap:14px;align-items:center;padding:20px 16px 20px 0}
-.clients{grid-template-columns:repeat(4,1fr)}
-.clients b{font-size:17px}
-@media (max-width:900px){.clients{grid-template-columns:repeat(2,1fr)}}
-
-/* filters */
-.filters{display:flex;flex-wrap:wrap;gap:8px;margin:-12px 0 24px}
-.filters button,.qtabs button{font-family:var(--mono);font-size:12.5px;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:transparent;color:var(--muted);cursor:pointer;transition:all .15s}
-.filters button:hover{color:var(--fg);border-color:var(--accent)}
-.filters button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--bg)}
-
-/* console query tabs */
-.qtabs{display:flex;flex-wrap:wrap;gap:6px;padding:12px 16px 0}
-.qtabs button{border-color:rgba(255,255,255,.14);color:var(--console-dim);font-size:11.5px;padding:5px 11px}
-.qtabs button:hover{color:var(--console-fg)}
-.qtabs button[aria-selected="true"]{background:#6FD3C7;border-color:#6FD3C7;color:#08161C}
-.run{display:flex;justify-content:flex-end;padding:0 18px}
-.run button{font-family:var(--mono);font-size:11.5px;background:transparent;border:1px solid rgba(255,255,255,.18);color:#6FD3C7;border-radius:6px;padding:4px 10px;cursor:pointer}
-.result tbody tr{animation:none}
-.result.fresh tbody tr{animation:row .35s ease both}
-.result.fresh tbody tr:nth-child(2){animation-delay:.05s}.result.fresh tbody tr:nth-child(3){animation-delay:.1s}.result.fresh tbody tr:nth-child(4){animation-delay:.15s}.result.fresh tbody tr:nth-child(5){animation-delay:.2s}.result.fresh tbody tr:nth-child(6){animation-delay:.25s}
-@keyframes row{from{transform:translateX(-6px);color:#6FD3C7}to{transform:none}}
-
-/* theme toggle + progress */
-.nav-right{display:flex;align-items:center;gap:18px}
-.theme{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--fg);display:grid;place-items:center;cursor:pointer}
-.theme svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
-.progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--accent)}
-nav{position:sticky}
-.chain li{transition:border-color .2s,transform .2s}
-.chain li:hover{border-color:var(--accent);transform:translateY(-2px)}
-
-@media (prefers-reduced-motion:reduce){.card,.chain li,.result.fresh tbody tr{transition:none;animation:none}}
-
-/* contact assistant */
-.contact-intro{display:flex;flex-direction:column;gap:14px;align-self:start}
-.contact-intro p{margin:0}
-.li-link{color:#6FD3C7;font-family:var(--mono);font-size:14px;text-decoration:none}
-.li-link:hover{text-decoration:underline}
-.chat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:16px;display:flex;flex-direction:column;min-height:380px;overflow:hidden}
-.chat-head{display:flex;gap:10px;align-items:center;padding:14px 16px;border-bottom:1px solid rgba(255,255,255,.1)}
-.chat-head .dot{width:10px;height:10px;border-radius:50%;background:#6FD3C7;box-shadow:0 0 0 4px rgba(111,211,199,.18)}
-.chat-head b{display:block;font-size:14px;color:var(--console-fg)}
-.chat-head small{font-family:var(--mono);font-size:11px;color:var(--console-dim)}
-.chat-log{flex:1;display:flex;flex-direction:column;gap:10px;padding:16px;overflow-y:auto;max-height:340px}
-.msg{max-width:85%;padding:10px 14px;border-radius:14px;font-size:14.5px;line-height:1.5;overflow-wrap:anywhere;white-space:pre-wrap}
-.msg.bot{background:rgba(255,255,255,.08);color:var(--console-fg);border-bottom-left-radius:4px;align-self:flex-start}
-.msg.me{background:#6FD3C7;color:#08161C;border-bottom-right-radius:4px;align-self:flex-end}
-.msg.typing{color:var(--console-dim);font-family:var(--mono);font-size:13px}
-.chat-input{padding:12px 14px;border-top:1px solid rgba(255,255,255,.1)}
-.choices{display:flex;flex-wrap:wrap;gap:8px}
-.choices button,.chat-input .send,.chat-input .ghost{font-family:var(--mono);font-size:12.5px;padding:8px 13px;border-radius:999px;border:1px solid rgba(111,211,199,.5);background:transparent;color:#6FD3C7;cursor:pointer}
-.choices button:hover,.chat-input .ghost:hover{background:rgba(111,211,199,.12)}
-.chat-input form{display:flex;gap:8px;align-items:flex-end}
-.chat-input input,.chat-input textarea{flex:1;min-width:0;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);color:var(--console-fg);border-radius:12px;padding:10px 12px;font:inherit;font-size:14.5px;resize:none}
-.chat-input input:focus,.chat-input textarea:focus{outline:none;border-color:#6FD3C7}
-.chat-input .send{background:#6FD3C7;color:#08161C;border-color:#6FD3C7;font-weight:500}
-.chat-input .err{color:#F0B866;font-size:12.5px;margin-top:6px;font-family:var(--mono)}
-.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
-.chat{position:relative}
-.chat-log{scrollbar-width:thin;scrollbar-color:rgba(111,211,199,.35) transparent}
-.chat-log::-webkit-scrollbar{width:6px}.chat-log::-webkit-scrollbar-track{background:transparent}
-.chat-log::-webkit-scrollbar-thumb{background:rgba(111,211,199,.35);border-radius:6px}
-.sent{position:absolute;inset:0;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;padding:28px;background:var(--console);border-radius:16px;animation:fadeIn .3s ease both}
-.sent canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
-.sent .tick{width:76px;height:76px;border-radius:50%;background:rgba(111,211,199,.14);display:grid;place-items:center;animation:pop .45s cubic-bezier(.2,1.4,.4,1) both}
-.sent .tick svg{width:40px;height:40px;fill:none;stroke:#6FD3C7;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
-.sent .tick path{stroke-dasharray:30;stroke-dashoffset:30;animation:draw .45s .25s ease forwards}
-.sent h3{font-family:var(--display);font-size:24px;font-weight:700;color:var(--console-fg);margin:6px 0 0}
-.sent p{margin:0;color:var(--console-dim);font-size:14.5px;max-width:32ch}
-.sent p b{color:var(--console-fg);font-weight:500;overflow-wrap:anywhere}
-.sent .actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:10px}
-.sent .actions button{font-family:var(--mono);font-size:13px;padding:10px 16px;border-radius:999px;cursor:pointer;border:1px solid #6FD3C7}
-.sent .again{background:#6FD3C7;color:#08161C}
-.sent .close{background:transparent;color:#6FD3C7}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes pop{from{transform:scale(.4)}to{transform:scale(1)}}
-@keyframes draw{to{stroke-dashoffset:0}}
-@media (prefers-reduced-motion:reduce){.sent,.sent .tick{animation:none}.sent .tick path{animation:none;stroke-dashoffset:0}}
-/* console typing */
-.caret{display:inline-block;width:7px;height:1.05em;background:#6FD3C7;vertical-align:-2px;margin-left:1px}
-.caret.idle{animation:caretBlink 1s steps(1) infinite}
-@keyframes caretBlink{50%{opacity:0}}
-.running{font-size:12px;color:var(--console-dim);padding:6px 0 10px}
-/* skill portal envelope flow */
-.chain li{position:relative}
-.chain li .mail{position:absolute;top:8px;right:8px;width:22px;height:16px;opacity:0;transform:translateY(-6px) scale(.6);transition:opacity .3s,transform .35s cubic-bezier(.2,1.5,.4,1)}
-.chain li .mail svg{width:100%;height:100%;fill:var(--surface);stroke:var(--accent);stroke-width:1.6;stroke-linejoin:round}
-.chain li.lit{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
-.chain li.lit .mail{opacity:1;transform:none}
-.chain li.lit::before{background:var(--amber)}
-@media (prefers-reduced-motion:reduce){.chain li .mail{transition:none}.caret{animation:none}}
-
-/* recognition block */
-.roles{margin:-6px 0 10px;font-size:13.5px;color:var(--muted);font-family:var(--mono)}
-.now.award{background:rgba(184,110,18,.14);color:var(--amber)}
-.honors a{color:var(--accent)}
-.certs .seal.sb{border-color:var(--amber);color:var(--amber)}
-.recog{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:28px;margin-top:36px;align-items:start}
-.trophy{margin:0;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--surface);max-width:100%}
-.trophy img{width:100%;height:auto;display:block}
-.recog-list{display:grid;gap:14px;min-width:0}
-.recog-item{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
-.recog-item h3{font-size:20px;font-weight:700;margin-top:4px}
-.recog-item .meta{margin:4px 0 6px;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
-.recog-item p{margin:0;color:var(--muted);font-size:15px}
-.recog-item .eyebrow{display:block}
-@media (max-width:720px){.recog{grid-template-columns:1fr}.trophy{max-width:300px}}
-
-/* sky: day, sunset or night behind the whole page */
-body{background:#0B1730}
-main,footer{position:relative;z-index:1}
-main > .wrap{background:color-mix(in srgb,var(--bg) 90%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-radius:28px;margin-block:20px 32px;box-shadow:0 30px 80px -50px rgba(0,0,0,.55)}
-footer .wrap{background:color-mix(in srgb,var(--bg) 88%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-radius:16px;padding-block:14px}
-footer{padding-block:0 24px}
-.sky{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;transition:background 1.2s ease}
-.sky[data-scene="day"]{background:linear-gradient(180deg,#5AA6E4 0%,#93CBF1 50%,#DCF0FB 100%)}
-.sky[data-scene="sunset"]{background:linear-gradient(180deg,#2C2A5C 0%,#6E3B6C 32%,#D9634F 60%,#F49A47 80%,#F9D47C 100%)}
-.sky[data-scene="night"]{background:linear-gradient(180deg,#040916 0%,#0A1630 55%,#16274A 100%)}
-.sky > *{position:absolute;opacity:0;transition:opacity 1s ease}
-.sun{width:110px;height:110px;border-radius:50%;top:10vh;right:9vw;background:radial-gradient(circle at 45% 40%,#FFF8D2 0%,#FFE47E 55%,#FFD04A 100%);box-shadow:0 0 90px 34px rgba(255,226,122,.5)}
-.sky[data-scene="day"] .sun{opacity:1}
-.sky[data-scene="sunset"] .sun{opacity:1;top:auto;bottom:15vh;right:14vw;width:170px;height:170px;background:radial-gradient(circle at 50% 45%,#FFE6A0 0%,#FFB45C 55%,#F2783A 100%);box-shadow:0 0 120px 50px rgba(246,140,70,.55)}
-.moon{width:84px;height:84px;border-radius:50%;top:11vh;right:12vw;background:radial-gradient(circle at 35% 35%,#FFFDF4 0%,#EDE8D6 60%,#D6CFB6 100%);box-shadow:0 0 70px 16px rgba(240,236,220,.22)}
-.moon::before,.moon::after{content:"";position:absolute;border-radius:50%;background:rgba(170,160,135,.28)}
-.moon::before{width:16px;height:16px;top:22px;left:44px}
-.moon::after{width:10px;height:10px;top:50px;left:26px}
-.sky[data-scene="night"] .moon,.sky[data-scene="night"] .stars,.sky[data-scene="night"] .shoot{opacity:1}
-.stars{inset:0}
-.star{position:absolute;width:2px;height:2px;border-radius:50%;background:#FFFFFF;animation:twinkle var(--d,3s) ease-in-out infinite;animation-delay:var(--dl,0s)}
-.star.big{width:3px;height:3px;box-shadow:0 0 6px rgba(255,255,255,.8)}
-@keyframes twinkle{0%,100%{opacity:.25}50%{opacity:1}}
-.shoot{top:14vh;left:-10vw;width:140px;height:2px;background:linear-gradient(90deg,rgba(255,255,255,0),#FFFFFF);border-radius:2px;transform:rotate(-18deg)}
-.sky[data-scene="night"] .shoot{animation:shoot 14s linear infinite 3s}
-@keyframes shoot{0%{transform:translate(0,0) rotate(-18deg);opacity:0}2%{opacity:1}8%{transform:translate(70vw,22vh) rotate(-18deg);opacity:0}100%{opacity:0;transform:translate(70vw,22vh) rotate(-18deg)}}
-.cloud{height:34px;width:130px;border-radius:999px;background:#FFFFFF;filter:blur(.3px)}
-.cloud::before,.cloud::after{content:"";position:absolute;border-radius:50%;background:inherit}
-.cloud::before{width:62px;height:62px;top:-32px;left:22px}
-.cloud::after{width:46px;height:46px;top:-22px;left:66px}
-.cloud.c1{top:16vh;animation:drift 120s linear infinite -20s}
-.cloud.c2{top:30vh;transform:scale(.7);animation:drift 160s linear infinite -90s}
-.cloud.c3{top:8vh;transform:scale(1.15);animation:drift 140s linear infinite -60s}
-.cloud.c4{top:44vh;transform:scale(.55);animation:drift 180s linear infinite -130s}
-.sky[data-scene="day"] .cloud{opacity:.92}
-.sky[data-scene="sunset"] .cloud.c1,.sky[data-scene="sunset"] .cloud.c3{opacity:.55;background:#F8C6B4}
-@keyframes drift{from{left:-20vw}to{left:110vw}}
-.hills{left:0;right:0;bottom:0;width:100%;height:24vh;opacity:1}
-.sky[data-scene="day"] .h1{fill:#A6D3BE}.sky[data-scene="day"] .h2{fill:#82BEA0}
-.sky[data-scene="sunset"] .h1{fill:#8E4B66}.sky[data-scene="sunset"] .h2{fill:#4F2747}
-.sky[data-scene="night"] .h1{fill:#0F1C36}.sky[data-scene="night"] .h2{fill:#0A1428}
-.hills path{transition:fill 1.2s ease}
-@media (prefers-reduced-motion:reduce){.cloud,.star,.shoot{animation:none!important}}
-
-/* courier lane: a small scene pinned to the bottom of the screen */
-.lane{position:fixed;left:0;right:0;bottom:0;height:170px;z-index:40;pointer-events:none}
-body{padding-bottom:120px}
-.scene{position:absolute;left:12px;bottom:9px;width:240px;height:88px;display:none;overflow:visible}
-.lane[data-scene="night"] .scene.night,.lane[data-scene="day"] .scene.day,.lane[data-scene="sunset"] .scene.sunset{display:block}
-.scene.front{z-index:3}
-.lane.specs-on .tableSpecs{display:none}
-.courier{position:absolute;left:0;bottom:0;width:64px;z-index:2;pointer-events:auto;cursor:pointer;transform:translateX(28px);will-change:transform}
-.flip{width:64px}
-.courier.left .flip{transform:scaleX(-1)}
-.courier.fade .flip{opacity:0}
-.flip{transition:opacity .25s}
-.dude{width:64px;height:99px;display:block;overflow:visible;transition:transform .35s ease;filter:drop-shadow(0 2px 5px rgba(0,0,0,.18))}
-.dude .shadow{fill:#000;opacity:.15}
-.courier.sit .dude{transform:translateY(6px)}
-.courier.lie .dude{transform:translateY(-6px) rotate(-90deg)}
-.courier.sit .shadow,.courier.lie .shadow{display:none}
-.dude .legL,.dude .legR,.dude .armF,.dude .armB{transform-box:fill-box}
-.dude .legL,.dude .legR{transform-origin:50% 0;transition:transform .3s ease}
-.dude .armF,.dude .armB{transform-origin:50% 8%}
-.courier.sit .legL,.courier.sit .legR{transform:rotate(-80deg)}
-.dude .envelope{opacity:0;transition:opacity .25s}
-.courier.carrying .envelope{opacity:1}
-.dude .eyes{transform-box:fill-box;transform-origin:center;animation:blink 4.5s infinite}
-.dude .eyesClosed,.dude .specs,.dude .shades{display:none}
-.courier.lie .eyes{display:none}
-.courier.lie .eyesClosed{display:inline}
-.courier.specs .specs{display:inline}
-.courier.shades .shades{display:inline}
-.courier.walking .legL{animation:stepA .42s ease-in-out infinite alternate}
-.courier.walking .legR{animation:stepB .42s ease-in-out infinite alternate}
-.courier.walking .armB{animation:stepA .42s ease-in-out infinite alternate}
-.courier.walking:not(.carrying) .armF{animation:stepB .42s ease-in-out infinite alternate}
-.courier.walking .bodyG{animation:bob .21s ease-in-out infinite alternate}
-.courier.waving .armF{animation:wave .6s ease-in-out 3 alternate}
-.dude .armF{transition:transform .35s ease}
-.courier.reach .armF{transform:rotate(-28deg)}
-.courier.lift .armF{transform:rotate(-150deg)}
-.flyspecs{position:absolute;left:0;bottom:0;width:18px;height:8px;z-index:5;opacity:0;pointer-events:none;transition:transform .65s cubic-bezier(.4,0,.2,1),opacity .15s}
-.flyspecs svg{width:100%;height:100%;stroke:#1A1A1A;stroke-width:1.8;fill:rgba(255,255,255,.35);overflow:visible}
-.flyspecs.on{opacity:1}
-@keyframes stepA{from{transform:rotate(22deg)}to{transform:rotate(-22deg)}}
-@keyframes stepB{from{transform:rotate(-22deg)}to{transform:rotate(22deg)}}
-@keyframes bob{from{transform:translateY(0)}to{transform:translateY(-2.5px)}}
-@keyframes wave{from{transform:rotate(-10deg)}to{transform:rotate(-150deg)}}
-@keyframes blink{0%,94%,100%{transform:scaleY(1)}96%{transform:scaleY(.1)}}
-.zzz{position:absolute;left:2px;bottom:58px;display:none;font-family:var(--mono);font-weight:500;color:#E3EBF0;pointer-events:none}
-.courier.lie .zzz{display:block}
-.zzz span{position:absolute;left:0;bottom:0;opacity:0;animation:zrise 2.7s ease-out infinite}
-.zzz span:nth-child(1){font-size:11px}
-.zzz span:nth-child(2){font-size:14px;animation-delay:.9s}
-.zzz span:nth-child(3){font-size:17px;animation-delay:1.8s}
-@keyframes zrise{0%{opacity:0;transform:translate(0,0)}20%{opacity:1}100%{opacity:0;transform:translate(14px,-30px)}}
-.bubble{position:absolute;bottom:104px;left:-6px;width:max-content;max-width:min(280px,calc(100vw - 32px));background:var(--surface);color:var(--fg);border:1px solid var(--line);border-radius:14px;padding:10px 13px;font-size:14px;line-height:1.45;box-shadow:0 12px 28px -14px rgba(0,0,0,.45);display:flex;flex-direction:column;gap:8px;align-items:flex-start;transition:opacity .25s,transform .25s;transform-origin:20px 100%;z-index:4}
-.bubble::after{content:"";position:absolute;left:var(--tail,24px);bottom:-7px;width:12px;height:12px;background:var(--surface);border-right:1px solid var(--line);border-bottom:1px solid var(--line);transform:rotate(45deg)}
-.bubble.hide{opacity:0;transform:scale(.85);pointer-events:none}
-.bubble #bubbleText{padding-right:16px}
-.bubble .x{position:absolute;top:4px;right:6px;background:transparent;border:0;color:var(--muted);font-size:16px;line-height:1;padding:2px 4px;cursor:pointer}
-.bubble .act{font-family:var(--mono);font-size:12px;padding:6px 12px;border-radius:999px;border:1px solid var(--accent);background:var(--accent);color:var(--bg);cursor:pointer}
-.bubble .act[hidden]{display:none}
-@media (prefers-reduced-motion:reduce){.courier,.courier *{animation:none!important;transition:none!important}}
-
-
-
-@media (max-width:860px){.hero{grid-template-columns:1fr}}
-@media (prefers-reduced-motion:no-preference){
-  .hero>*{animation:rise .6s ease both}.hero>*:nth-child(2){animation-delay:.12s}
-  @keyframes rise{from{transform:translateY(12px)}to{transform:none}}
-}
-</style>
-<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}html{scroll-behavior:smooth}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Codex Computer Use - Your Ultimate Guide to AI-Powered Computer Automation</title>
+    <meta name="description" content="Discover the best resources for Codex computer use including documentation, safety notes, practical write-ups, and alternatives. Perfect for beginners and advanced users alike.">
+    <meta name="keywords" content="ai-coding,awesome,awesome-list,codex,codex-computer-use,codex-computer-use-github,openai-codex">
+    <meta name="author" content="Makiya1202">
+    <meta property="og:title" content="Awesome Codex Computer Use - Your Ultimate Guide to AI-Powered Computer Automation">
+    <meta property="og:description" content="Discover the best resources for Codex computer use including documentation, safety notes, practical write-ups, and alternatives.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/Makiya1202/awesome-codex-computer-use">
+    <meta property="og:image" content="https://github.com/Makiya1202/awesome-codex-computer-use/raw/main/images/banner.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Awesome Codex Computer Use - Your Ultimate Guide">
+    <meta name="twitter:description" content="Discover the best resources for Codex computer use including docs, safety notes, and alternatives.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.8;
+            color: #2d3748;
+            background: linear-gradient(135deg, #f8fafc 0%, #eef2f7 50%, #e3eaf2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            padding: 40px 50px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #1a202c;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e2e8f0;
+        }
+        h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #4a5568;
+            margin: 30px 0 15px;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            color: #3182ce;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #2b6cb0;
+            text-decoration: underline;
+        }
+        .download-btn-container {
+            text-align: center;
+            margin: 40px 0;
+        }
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(45deg, #f59e0b, #ef4444, #8b5cf6);
+            color: white;
+            padding: 20px 45px;
+            border-radius: 50px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .download-btn:hover {
+            transform: translateY(-3px);
+            text-decoration: none;
+            box-shadow: 0 12px 35px rgba(139, 92, 246, 0.4);
+            color: white;
+        }
+        .secondary-btn {
+            display: inline-block;
+            background: #4299e1;
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            box-shadow: 0 5px 20px rgba(66, 153, 225, 0.3);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        .secondary-btn:hover {
+            background: #3182ce;
+            transform: translateY(-2px);
+            text-decoration: none;
+            color: white;
+        }
+        .highlight-box {
+            background: linear-gradient(135deg, #ebf4ff, #f3e8ff);
+            border-left: 5px solid #4299e1;
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+        .info-box {
+            background: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        .badge {
+            display: inline-block;
+            background: #48bb78;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 5px;
+        }
+        .emoji-large {
+            font-size: 2rem;
+            margin-right: 10px;
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px 20px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+            .download-btn,
+            .secondary-btn {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
-
-
-<div class="sky" id="sky" data-scene="day" aria-hidden="true">
-  <div class="sun"></div>
-  <div class="moon"></div>
-  <div class="stars" id="stars"></div>
-  <div class="shoot"></div>
-  <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div><div class="cloud c4"></div>
-  <svg class="hills" viewBox="0 0 1440 220" preserveAspectRatio="none"><path class="h1" d="M0 130 Q200 50 420 112 T860 100 T1240 80 T1440 110 V220 H0Z"/><path class="h2" d="M0 178 Q260 110 560 160 T1080 150 T1440 168 V220 H0Z"/></svg>
-</div>
-
-<nav>
-  <div class="wrap">
-    <a class="logo" href="#top">tarun<span>.sharma</span></a>
-    <ul>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#work">Work</a></li>
-      <li><a href="#clients">Clients</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <button class="theme" id="themeBtn" type="button" aria-label="Change the sky"><svg viewBox="0 0 24 24" id="themeIcon"></svg></button>
-  </div>
-  <div class="progress" id="progress"></div>
-</nav>
-
-<main id="top">
-  <div class="wrap">
-    <header class="hero">
-      <div>
-        <div class="status"><i></i>Associate Consultant at Infosys · India</div>
-        <h1>Tarun<br><em>Sharma</em></h1>
-        <p class="role">Salesforce Developer for Financial Services Cloud, OmniStudio and Agentforce</p>
-        <p class="lede">I build Salesforce solutions end to end: Apex frameworks, Lightning Web Components, managed packages, integrations and Agentforce agents. Four years across Commerce, Sales, Service and Experience Cloud for clients in healthcare, aviation, logistics, travel and wine, and now Financial Services Cloud for a leading US bank.</p>
-        <div class="ctas">
-          <a class="btn primary" href="#contact">Get in touch</a>
-          <a class="btn ghost" href="https://www.linkedin.com/in/tarun-sharma-973a08200" target="_blank" rel="noopener">LinkedIn ↗</a>
-          <a class="btn ghost" href="https://www.salesforce.com/trailblazer/req2ypxan6kyw0dfmn" target="_blank" rel="noopener">Trailhead ↗</a>
+    <div class="container">
+        <h1>🤖 awesome-codex-computer-use - Master AI-Powered Computer Automation</h1>
+        
+        <div class="highlight-box">
+            <p style="font-size: 1.3rem; margin-bottom: 0;"><strong>Discover everything you need to know about OpenAI's Codex computer use capabilities.</strong> From beginner guides to advanced safety notes, this curated collection gets you up and running in minutes.</p>
         </div>
-      <div class="console" aria-label="A SOQL query that returns Tarun's profile">
-        <header><span>Developer Console · Query Editor</span><b><i></i><i></i><i></i></b></header>
-        <div class="qtabs" role="tablist" aria-label="Pick a query">
-          <button type="button" role="tab" aria-selected="true" data-q="profile">Profile</button>
-          <button type="button" role="tab" aria-selected="false" data-q="clouds">Clouds</button>
-          <button type="button" role="tab" aria-selected="false" data-q="certs">Certs</button>
-          <button type="button" role="tab" aria-selected="false" data-q="apis">Integrations</button>
-        </div>
-<pre id="qtext"><span class="kw">SELECT</span> Name, Title__c, Experience_Years__c,
-       Clouds__c, Certifications__c
-<span class="kw">FROM</span>   Developer__c
-<span class="kw">WHERE</span>  Name = <span class="str">'Tarun Sharma'</span>
-<span class="kw">LIMIT</span>  1</pre>
-        <div class="run"><button type="button" id="runBtn">▶ Execute</button></div>
-        <div class="result" id="qresult">
-          <table>
-            <thead><tr><th>Name</th><th>Years</th><th>Clouds</th><th>Certs</th></tr></thead>
-            <tbody><tr><td>Tarun Sharma</td><td>4+</td><td>FSC; Sales; Service; Commerce; Experience</td><td>5</td></tr></tbody>
-            <tfoot><tr><td colspan="4">Query Results · Total Rows: 1</td></tr></tfoot>
-          </table>
-        </div>
-      </div>
-      </div>
 
-      <div class="visual">
-      <figure class="portrait"><img src="portrait.jpg" alt="Illustrated portrait of Tarun Sharma" width="720" height="956"></figure>
-      </div>
-    </header>
+        <div class="download-btn-container">
+            <a href="https://github.com/Makiya1202/awesome-codex-computer-use/releases" class="download-btn">🎯 Get Started Now</a>
+        </div>
 
-    <div class="strip" id="strip">
-      <div><b>4+</b><span>years on Salesforce</span></div>
-      <div><b>5</b><span>Salesforce clouds delivered</span></div>
-      <div><b>5×</b><span>Salesforce certified</span></div>
+        <h2>🚀 What Is This All About?</h2>
+        <p>Awesome Codex Computer Use is your one-stop resource hub for understanding and utilizing OpenAI's Codex computer control features. Whether you're a complete beginner or a seasoned tech enthusiast, this guide compiles the most valuable information, tools, and insights into one easily digestible package.</p>
+        <p>Think of it as a carefully curated library that saves you hours of searching. Instead of digging through endless forums, documentation, and blog posts, we've gathered the best of the best for you.</p>
+
+        <h2>✨ Why Should You Care?</h2>
+        <p>Codex computer use represents a breakthrough in how we interact with our computers. Imagine being able to control your computer through natural language commands, automate repetitive tasks, and achieve complex operations with simple instructions. Here's what makes this technology revolutionary:</p>
+        <ul>
+            <li><strong>Save Hours of Work:</strong> Automate tedious processes and streamline your workflow dramatically.</li>
+            <li><strong>No Coding Required:</strong> Use plain English to control your computer - no programming knowledge needed.</li>
+            <li><strong>Boost Productivity:</strong> Complete tasks in seconds that would normally take minutes or hours.</li>
+            <li><strong>Learn and Grow:</strong> Understand the full potential of AI-assisted computing at your own pace.</li>
+        </ul>
+
+        <h2>📚 What's Inside This Collection?</h2>
+        
+        <h3>📄 Comprehensive Documentation</h3>
+        <p>We've compiled all the essential documentation you need to understand Codex computer use thoroughly. From official OpenAI docs to community-contributed guides, everything is organized clearly for easy reference.</p>
+
+        <h3>💡 Practical Write-Ups and Tutorials</h3>
+        <p>Real-world examples and step-by-step tutorials that show you exactly how to harness Codex's power. These write-ups break down complex concepts into simple, doable actions that anyone can follow.</p>
+
+        <h3>🖥️ Three Codex Surfaces Explained</h3>
+        <p>The Codex ecosystem consists of three distinct surfaces - each designed for different purposes. We demystify each one:</p>
+        <div class="info-box">
+            <p><strong>1. Desktop Application:</strong> A native app for your computer that brings Codex's capabilities right to your fingertips.</p>
+            <p><strong>2. Browser Extension:</strong> Seamlessly integrate Codex with your web browsing experience.</p>
+            <p><strong>3. CLI (Command-Line Interface):</strong> For those who want more control through a terminal-based approach.</p>
+        </div>
+
+        <h3>🛡️ Safety Notes and Best Practices</h3>
+        <p>Powerful tools come with responsibility. Our curated safety notes help you:</p>
+        <ul>
+            <li>Understand potential risks and how to mitigate them</li>
+            <li>Follow recommended guidelines for safe usage</li>
+            <li>Protect your data and privacy while using AI automation</li>
+            <li>Recognize when NOT to use automated controls</li>
+        </ul>
+
+        <h3>🔄 Alternatives Worth Exploring</h3>
+        <p>While Codex is remarkable, it's always good to know your options. We've researched and compiled the best alternatives so you can make an informed choice based on your specific needs and preferences.</p>
+
+        <h2>📥 How to Get Started</h2>
+        <p>Getting started is remarkably simple. We've made the entire process beginner-friendly and straightforward:</p>
+        <div class="info-box">
+            <p><strong>Step 1:</strong> Click the download button at the top of this page and visit this link to download the application.</p>
+            <p><strong>Step 2:</strong> Once the download completes, you'll have everything you need to begin exploring.</p>
+            <p><strong>Step 3:</strong> Follow the included resources to maximize your learning and results.</p>
+        </div>
+
+        <div class="download-btn-container">
+            <a href="https://github.com/Makiya1202/awesome-codex-computer-use/releases" class="secondary-btn">📲 Download the Application</a>
+        </div>
+
+        <h2>🎯 Who Is This For?</h2>
+        <p>This resource is perfect for:</p>
+        <ul>
+            <li><strong>Absolute Beginners:</strong> No prior technical knowledge required - everything is explained clearly.</li>
+            <li><strong>Productivity Enthusiasts:</strong> Anyone looking to automate and speed up their daily computer tasks.</li>
+            <li><strong>Tech Curious:</strong> People interested in exploring the latest AI capabilities in a safe, guided way.</li>
+            <li><strong>Researchers and Students:</strong> Need a comprehensive starting point for understanding Codex computer use.</li>
+        </ul>
+
+        <h2>🔍 Key Features and Benefits</h2>
+        <ul>
+            <li><strong>Curated Quality:</strong> Every resource has been hand-picked for quality and relevance.</li>
+            <li><strong>Continuously Updated:</strong> The collection is regularly refreshed with the latest information.</li>
+            <li><strong>Community-Driven:</strong> Contributions and feedback from real users keep this list authentic.</li>
+            <li><strong>One-Stop Resource:</strong> Save time with everything consolidated in one location.</li>
+            <li><strong>No-Nonsense Approach:</strong> Clear answers without the fluff or technical jargon.</li>
+        </ul>
+
+        <h2>💰 Is It Really Free?</h2>
+        <p>Yes! This resource is completely free and open-source. The goal is to democratize access to knowledge about AI computer use. There are no hidden fees, subscription requirements, or paywalls. We believe in sharing knowledge freely.</p>
+
+        <h2>🏆 What Makes This List Special?</h2>
+        <p>Unlike scattered blog posts and forums, this awesome list offers:</p>
+        <ul>
+            <li><strong>Structured Organization:</strong> Everything is logically categorized for easy navigation.</li>
+            <li><strong>Beginner-Focused:</strong> Content is written and curated specifically for non-technical users.</li>
+            <li><strong>Practical Focus:</strong> Real applications and examples you can use immediately.</li>
+            <li><strong>Community-Vetted:</strong> Resources that have been tested and recommended by actual users.</li>
+        </ul>
+
+        <h2>🤝 Get Involved</h2>
+        <p>This is a living project, and your participation makes it better! Whether you have suggestions, found a helpful resource we missed, or just want to show appreciation, your involvement is welcome:</p>
+        <ul>
+            <li>⭐ Star the repository to show support</li>
+            <li>📝 Contribute by submitting new resources</li>
+            <li>💬 Share your experience with others</li>
+            <li>🐛 Report issues or suggest improvements</li>
+        </ul>
+
+        <h2>⚡ Common Questions</h2>
+        <div class="info-box">
+            <p><strong>Q: Do I need to be technical to use this?</strong></p>
+            <p>A: Absolutely not! All content is presented in an easy-to-understand format designed for beginners.</p>
+            <p><strong>Q: Is the information up to date?</strong></p>
+            <p>A: We continuously update the list to reflect the latest developments in the field.</p>
+            <p><strong>Q: Can I trust the quality of resources?</strong></p>
+            <p>A: Everything is vetted by the community and maintained by knowledgeable contributors.</p>
+        </div>
+
+        <h2>🎉 Final Thoughts</h2>
+        <p>Your journey into AI-powered computer use starts here. This curated collection of knowledge will give you the confidence and capability to harness Codex's power effectively. Say goodbye to hours of searching and hello to organized, actionable information that gets results.</p>
+        <p>Don't wait another minute to unlock the potential of AI-driven productivity. Start exploring today and see what's possible when you combine your intentions with the power of Codex computer use.</p>
+
+        <div class="download-btn-container" style="margin-top: 30px;">
+            <a href="https://github.com/Makiya1202/awesome-codex-computer-use/releases" class="download-btn">🚀 Download Now</a>
+        </div>
+
+        <div style="margin-top: 40px; padding-top: 30px; border-top: 2px solid #e2e8f0; text-align: center;">
+            <span class="badge">💻 ai-coding</span>
+            <span class="badge">⭐ awesome</span>
+            <span class="badge">📚 awesome-list</span>
+            <span class="badge">🤖 codex</span>
+            <span class="badge">🖥️ codex-computer-use</span>
+            <span class="badge">🌐 codex-computer-use-github</span>
+            <span class="badge">🔥 openai-codex</span>
+        </div>
     </div>
-
-    <section id="experience">
-      <div class="sec-head">
-        <span class="eyebrow">Experience</span>
-        <h2>Where I've shipped</h2>
-      </div>
-      <ol class="timeline">
-        <li class="job">
-          <div class="when">Aug 2026 – Present<br><span class="now">Current</span></div>
-          <div>
-            <h3>Associate Consultant</h3>
-            <div class="org">Infosys</div>
-            <ul>
-              <li>Working on Salesforce Financial Services Cloud for a leading US bank in an onsite–offshore Agile team.</li>
-              <li>Building OmniStudio components (OmniScripts, FlexCards, Integration Procedures, Data Mappers) for guided banking journeys and customer 360 views.</li>
-              <li>Extending the FSC data model (Person Accounts, Households, Financial Accounts, Action Plans) with Apex and LWC under banking security standards.</li>
-              <li>Contributing to Agentforce use cases with Topics, Actions and Prompt Builder to improve banker productivity.</li>
-            </ul>
-            <div class="tags"><span>FSC</span><span>OmniStudio</span><span>Agentforce</span><span>Apex</span><span>LWC</span></div>
-          </div>
-        </li>
-        <li class="job">
-          <div class="when">Sep 2024 – Jun 2026</div>
-          <div>
-            <h3>CX Cloud Developer</h3>
-            <div class="org">CRMIT Solutions</div>
-            <ul>
-              <li>Built an Agentforce agent that renders a custom LWC in chat, showing managers which employees are allocated to which projects and for how many hours.</li>
-              <li>Built an Employee Efficiency dashboard (Apex controller + LWC with Chart.js) and the internal Skill Tracking portal with multi-level manager approvals and email digests.</li>
-              <li>Built Java Spring Boot middleware for a real-time Salesforce–Kafka integration for UnitedHealthcare (UHC), and backend Apex logic for Aramco (energy).</li>
-              <li>When the team needed Java developers, built an internal employee portal with Spring Boot, Hibernate and Thymeleaf, later moving the UI to React.</li>
-              <li>Delivered an LWC Expense Claim System that cut manual effort by 40%; kept Apex coverage above 90% with CI/CD.</li>
-            </ul>
-            <div class="tags"><span>Agentforce</span><span>LWC</span><span>Chart.js</span><span>Kafka</span><span>Spring Boot</span></div>
-          </div>
-        </li>
-        <li class="job">
-          <div class="when">Jul 2022 – Jul 2024<br><span class="now award">Employee of the Quarter</span></div>
-          <div>
-            <h3>Associate Salesforce Developer</h3>
-            <div class="org">Metadologie · Jaipur</div>
-            <p class="roles">Associate Salesforce Developer, Apr 2023 – Jul 2024 · Salesforce Trainee Developer, Jul 2022 – Mar 2023</p>
-            <ul>
-              <li>Named Employee of the Quarter (Apr–Jun 2023) for creating Money Ease Tax, a tax calculation product that improved efficiency and accuracy.</li>
-              <li>Built a Visualforce PDF rendering solution that works across mobile and desktop, and real-time features with CometD Platform Events for healthcare and B2B Commerce clients.</li>
-              <li>Built Meta Tax Calculator, a second-generation managed package (2GP) that calculates tax generically on any object, on top of Avalara APIs.</li>
-              <li>Built Apex triggers and async processes for Sales Order to Invoice tax distribution with no extra API overhead.</li>
-              <li>Designed REST integrations with Avalara, Stripe, Google Drive, Firebase and Strapi; built LWC components for aviation clients.</li>
-              <li>Mentored junior developers on Apex and testing practice.</li>
-            </ul>
-            <div class="tags"><span>2GP</span><span>Avalara</span><span>Stripe</span><span>Visualforce</span><span>Platform Events</span><span>B2B Commerce</span></div>
-          </div>
-        </li>
-      </ol>
-    </section>
-
-    <section id="work" style="padding-top:0">
-      <div class="sec-head">
-        <span class="eyebrow">Selected work</span>
-        <h2>Things I've built</h2>
-        <p>Client systems are private, so these describe the problem, the build and the result.</p>
-      </div>
-      <div class="filters" role="group" aria-label="Filter projects">
-        <button type="button" aria-pressed="true" data-f="all">All</button>
-        <button type="button" aria-pressed="false" data-f="ai">Agentforce &amp; AI</button>
-        <button type="button" aria-pressed="false" data-f="lwc">LWC &amp; Apex</button>
-        <button type="button" aria-pressed="false" data-f="integration">Integrations</button>
-        <button type="button" aria-pressed="false" data-f="java">Java</button>
-        <button type="button" aria-pressed="false" data-f="fsc">FSC &amp; Packages</button>
-      </div>
-      <div class="work">
-        <article class="card feature" data-cat="fsc ai">
-          <div class="card-top"><span class="kind">Banking · Financial Services Cloud</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20.5h18"/></svg></span></div>
-          <h3>Guided banking journeys on OmniStudio</h3>
-          <p>OmniScripts and FlexCards backed by Integration Procedures that give bankers one guided flow and a single view of the customer, households and financial accounts.</p>
-          <div class="metric">FSC · OmniStudio · Agentforce</div>
-        </article>
-        <article class="card" data-cat="ai lwc">
-          <div class="card-top"><span class="kind">Agentforce · LWC</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/><path d="M8.5 9.5h7M8.5 12.5h4"/></svg></span></div>
-          <h3>Resource Allocation Agent</h3>
-          <p>An Agentforce agent that answers "who's on which project?" by rendering a custom LWC right in the chat, listing each employee's project allocations and hours.</p>
-          <div class="metric">Capacity answers for managers, in chat</div>
-        </article>
-        <article class="card" data-cat="lwc">
-          <div class="card-top"><span class="kind">Apex · LWC · Chart.js</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V4M4 20h16"/><path d="M7 16l4-5 3 3 5-7"/></svg></span></div>
-          <h3>Employee Efficiency Dashboard</h3>
-          <p>An Apex controller feeds an LWC that charts employee efficiency with Chart.js, so leads can compare output across people and periods.</p>
-          <div class="metric">Live efficiency charts</div>
-        </article>
-        <article class="card feature" data-cat="lwc">
-          <div class="card-top"><span class="kind">Internal portal · CRMIT Solutions</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3.5 19c.8-3.2 3-5 5.5-5s4.7 1.8 5.5 5"/><path d="M15.5 11.5l1.8 1.8 3.5-3.8"/></svg></span></div>
-          <h3>Skill Tracking &amp; Approval Portal</h3>
-          <p>Employees add their skills, managers approve them, and the system emails the right summary to every level of the organisation.</p>
-          <ol class="chain">
-            <li><span class="mail" aria-hidden="true"><svg viewBox="0 0 22 16"><rect x="1" y="1" width="20" height="14" rx="2"/><path d="M1.5 1.8 L11 9 L20.5 1.8"/></svg></span><b>Employee</b><span>Adds any skill to their profile.</span></li>
-            <li><span class="mail" aria-hidden="true"><svg viewBox="0 0 22 16"><rect x="1" y="1" width="20" height="14" rx="2"/><path d="M1.5 1.8 L11 9 L20.5 1.8"/></svg></span><b>Manager</b><span>Approves it. Employee and manager both get an email.</span></li>
-            <li><span class="mail" aria-hidden="true"><svg viewBox="0 0 22 16"><rect x="1" y="1" width="20" height="14" rx="2"/><path d="M1.5 1.8 L11 9 L20.5 1.8"/></svg></span><b>Branch head</b><span>Gets a table of everyone in the branch who is missing skills.</span></li>
-            <li><span class="mail" aria-hidden="true"><svg viewBox="0 0 22 16"><rect x="1" y="1" width="20" height="14" rx="2"/><path d="M1.5 1.8 L11 9 L20.5 1.8"/></svg></span><b>HR</b><span>Gets the same table for the whole company.</span></li>
-          </ol>
-          <div class="metric">Managers also get a table of their own reports with missing skills</div>
-        </article>
-        <article class="card feature" data-cat="fsc integration">
-          <div class="card-top"><span class="kind">Managed package · 2GP</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/></svg></span></div>
-          <h3>Meta Tax Calculator</h3>
-          <p>A second-generation managed package that calculates tax generically on any object, using Avalara, with Sales Order to Invoice distribution in Apex.</p>
-          <div class="metric">Works on any object, any org</div>
-        </article>
-        <article class="card" data-cat="integration java">
-          <div class="card-top"><span class="kind">Integration · Java · Healthcare</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="5" cy="12" r="2"/><circle cx="19" cy="6" r="2"/><circle cx="19" cy="18" r="2"/><path d="M7 11l10-4M7 13l10 4"/></svg></span></div>
-          <h3>UHC Kafka API Integration</h3>
-          <p>A Java Spring Boot middleware between Salesforce and Kafka for UnitedHealthcare, streaming high volumes of records in real time.</p>
-          <div class="metric">Real-time, high throughput</div>
-        </article>
-        <article class="card" data-cat="java">
-          <div class="card-top"><span class="kind">Java · Spring Boot · React</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 18h8M7 21h10"/><path d="M8 14c-2-1.2-3-3-3-5h14c0 2-1 3.8-3 5z"/><path d="M19 9h1.5a2 2 0 0 1 0 4H18"/><path d="M10 6c0-1.5 1-1.5 1-3M14 6c0-1.5 1-1.5 1-3"/></svg></span></div>
-          <h3>Employee Portal (Java full stack)</h3>
-          <p>A Spring Boot app with login and logout and employee records stored through Hibernate (Spring Data JPA). I built the UI first in Thymeleaf, then rebuilt it in React, pairing with AI assistants along the way.</p>
-          <div class="metric">Spring Boot · Hibernate · Thymeleaf → React</div>
-        </article>
-        <article class="card" data-cat="integration">
-          <div class="card-top"><span class="kind">Commerce · Integration</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 4h2.5l2 11h10.5l2-8H6.5"/><circle cx="9" cy="19" r="1.5"/><circle cx="17" cy="19" r="1.5"/></svg></span></div>
-          <h3>Shopify Integration for Colgin Cellars</h3>
-          <p>Connected the winery's Shopify store with Salesforce so orders and customers stay in sync across both systems.</p>
-          <div class="metric">Shopify ↔ Salesforce</div>
-        </article>
-        <article class="card" data-cat="lwc">
-          <div class="card-top"><span class="kind">Lightning Web Components</span><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.5-2 1.5-2-1.5-2 1.5-2-1.5L6 21z"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></span></div>
-          <h3>Expense Claim System</h3>
-          <p>An LWC app that replaced a manual claims process with submission, validation and approval inside Salesforce.</p>
-          <div class="metric">40% less manual effort</div>
-        </article>
-      </div>
-    </section>
-
-    <section id="clients" style="padding-top:0">
-      <div class="sec-head">
-        <span class="eyebrow">Clients</span>
-        <h2>Eight industries, one platform</h2>
-      </div>
-      <ul class="clients">
-        <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 10l9-6 9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 20.5h18"/></svg></span><div><b>A leading US bank</b><span>Banking · FSC</span></div></li>
-        <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9.5 3.5h5v6h6v5h-6v6h-5v-6h-6v-5h6z"/></svg></span><div><b>UnitedHealthcare</b><span>Healthcare</span></div></li>
-        <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3s6.5 7.3 6.5 11.5a6.5 6.5 0 0 1-13 0C5.5 10.3 12 3 12 3z"/><path d="M9 15a3 3 0 0 0 3 3"/></svg></span><div><b>Aramco</b><span>Energy &amp; petroleum</span></div></li>
-        <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 15.5v-2L13.5 9V4.5a1.5 1.5 0 0 0-3 0V9L3 13.5v2l7.5-2.5v4.5L8.5 19v1.5l3.5-1 3.5 1V19l-2-1.5V13z"/></svg></span><div><b>Seattle Aviation Solutions</b><span>Aviation</span></div></li>
-        <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 17a8 8 0 1 1 16 0"/><path d="M12 17l4-5"/><path d="M6.5 12.5l1 .6M12 8v1.2M17.5 12.5l-1 .6"/></svg></span><div><b>Simulator Components</b><span>Flight simulation</span></div></li>
-        <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2.5 6h11v10h-11zM13.5 9.5h4l3.5 3.5v3h-7.5z"/><circle cx="6.5" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/></svg></span><div><b>eFreightShip</b><span>Freight &amp; logistics</span></div></li>
-        <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 14.5l1.5 4.5h13l1.5-4.5zM6.5 14.5V9h11v5.5M10 9V5.5h4V9"/><path d="M3 21.5c1.5 0 1.5-1 3-1s1.5 1 3 1 1.5-1 3-1 1.5 1 3 1 1.5-1 3-1 1.5 1 3 1"/></svg></span><div><b>CruiseWeb</b><span>Cruise &amp; travel</span></div></li>
-        <li><span class="ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 3h8l-.5 5.5a3.5 3.5 0 0 1-7 0zM12 12v8M8.5 20.5h7"/></svg></span><div><b>Colgin Cellars</b><span>Wine &amp; spirits</span></div></li>
-      </ul>
-      <div class="chips" aria-label="Integrations">
-        <span>Shopify</span><span>Stripe</span><span>Avalara</span><span>Google Drive</span><span>Kafka</span><span>MuleSoft</span><span>Firebase</span><span>Strapi</span>
-      </div>
-    </section>
-
-    <section id="skills" style="padding-top:0">
-      <div class="sec-head">
-        <span class="eyebrow">Skills</span>
-        <h2>Toolkit</h2>
-      </div>
-      <div class="skills">
-        <div><h3>Clouds</h3><p>Financial Services Cloud, Commerce Cloud, Sales Cloud, Service Cloud, Experience Cloud. FSC data model, Action Plans.</p></div>
-        <div><h3>OmniStudio</h3><p>OmniScripts, FlexCards, Integration Procedures, Data Mappers (formerly DataRaptors), Expression Sets.</p></div>
-        <div><h3>AI &amp; Agentforce</h3><p>Agent Builder, Topics &amp; Actions, Prompt Builder, Einstein AI. AI-assisted development with Claude, ChatGPT, GitHub Copilot and Cursor.</p></div>
-        <div><h3>Apex &amp; platform</h3><p>Classes, triggers, frameworks, Queueable, Batch, Schedulable, Platform Events, CDC, Named Credentials, SSO.</p></div>
-        <div><h3>Front end</h3><p>Lightning Web Components, Aura, Chart.js, JavaScript, HTML, CSS, Visualforce.</p></div>
-        <div><h3>Integration</h3><p>MuleSoft Anypoint, REST &amp; Bulk API, Kafka, Spring Boot, Shopify, Stripe, Avalara, Google Drive, Firebase, Strapi.</p></div>
-        <div><h3>Data &amp; automation</h3><p>SOQL, SOSL, SQL, Data Loader, Flows, Approval Processes.</p></div>
-        <div><h3>Quality &amp; DevOps</h3><p>Apex test classes across triggers, async, callouts and APIs, 90%+ coverage, Git, SFDX, CI/CD.</p></div>
-        <div><h3>Java &amp; full stack</h3><p>Core Java, Spring Boot, Spring Data JPA / Hibernate, REST APIs, Thymeleaf, React (working knowledge).</p></div>
-      </div>
-    </section>
-
-    <section id="certifications" style="padding-top:0">
-      <div class="sec-head">
-        <span class="eyebrow">Certifications</span>
-        <h2>Five active Salesforce certifications</h2>
-      </div>
-      <ul class="certs">
-        <li><span class="seal">PD</span><div><b>Platform Developer</b><small>Salesforce · Issued Jun 2025</small></div></li>
-        <li><span class="seal">AGF</span><div><b>Agentforce Specialist</b><small>Salesforce · Issued Dec 2025 · ID 7267380</small></div></li>
-        <li><span class="seal">MUL</span><div><b>MuleSoft Developer</b><small>Salesforce · Issued Jan 2026 · ID 7346623</small></div></li>
-        <li><span class="seal">JS</span><div><b>JavaScript Developer</b><small>Salesforce · Issued Nov 2025</small></div></li>
-        <li><span class="seal">ADM</span><div><b>Platform Administrator</b><small>Salesforce · Issued Feb 2021</small></div></li>
-        <li><span class="seal sb">3</span><div><b>Superbadges</b><small>Agentforce Service · Prompt Builder Templates · Apex Specialist</small></div></li>
-      </ul>
-      <p class="honors">See all badges and credentials on my <a href="https://www.salesforce.com/trailblazer/req2ypxan6kyw0dfmn" target="_blank" rel="noopener">Trailhead profile ↗</a></p>
-
-      <div class="recog">
-        <figure class="trophy"><img src="award.jpg" alt="Employee of the Quarter trophy from Metadologie, Apr–Jun 2023" width="474" height="632" loading="lazy"></figure>
-        <div class="recog-list">
-          <div class="recog-item">
-            <span class="eyebrow">Recognition</span>
-            <h3>Employee of the Quarter</h3>
-            <p class="meta">Metadologie · Apr–Jun 2023</p>
-            <p>Awarded for creating Money Ease Tax, a tax calculation product, and for consistently delivering new solutions, including managed and second-generation managed packages.</p>
-          </div>
-          <div class="recog-item">
-            <h3>Trailhead Ranger · Agentblazer Innovator 2025</h3>
-            <p class="meta">Salesforce Trailhead</p>
-            <p>172 badges, 102,900 points, 16 trails and 3 superbadges: Agentforce Service, Prompt Builder Templates and Apex Specialist.</p>
-          </div>
-          <div class="recog-item">
-            <span class="eyebrow">Education</span>
-            <h3>BCA, Information Technology</h3>
-            <p class="meta">Sanskriti College, University of Rajasthan · 2019–2022 · 72.4%</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" style="padding-top:0">
-      <div class="contact">
-        <div class="contact-intro">
-          <h2>Let's build something.</h2>
-          <p>Hiring for Salesforce FSC, OmniStudio or Agentforce, or have a project in mind? Tell my assistant what you need and it lands straight in my inbox. I usually reply within a day or two.</p>
-          <a class="li-link" href="https://www.linkedin.com/in/tarun-sharma-973a08200" target="_blank" rel="noopener">Or message me on LinkedIn ↗</a>
-          <a class="li-link" href="https://www.salesforce.com/trailblazer/req2ypxan6kyw0dfmn" target="_blank" rel="noopener">View my Trailhead profile ↗</a>
-        </div>
-        <div class="chat" id="chat" aria-label="Contact assistant">
-          <div class="chat-head"><span class="dot"></span><div><b>Tarun's assistant</b><small>Sends your message to Tarun</small></div></div>
-          <div class="chat-log" id="chatLog" aria-live="polite">
-            <div class="msg bot">Hi! I pass messages on to Tarun. What brings you here?</div>
-          </div>
-          <div class="chat-input" id="chatInput">
-            <div class="choices">
-              <button type="button" data-topic="Job opportunity">Job opportunity</button>
-              <button type="button" data-topic="Freelance or project work">Freelance / project</button>
-              <button type="button" data-topic="Salesforce question or collaboration">Salesforce question</button>
-              <button type="button" data-topic="Just saying hi">Just saying hi</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-</main>
-
-<section class="lane" id="lane" data-scene="day" aria-label="Message courier">
-  <!-- night: bed, bedside table with specs and lamp -->
-  <svg class="scene night" viewBox="0 0 300 110" aria-hidden="true">
-    <ellipse cx="110" cy="109" rx="120" ry="5" fill="#000" opacity=".25"/>
-    <rect x="6" y="44" width="10" height="66" rx="3" fill="#5A3E2A"/>
-    <rect x="146" y="62" width="8" height="48" rx="3" fill="#5A3E2A"/>
-    <rect x="12" y="92" width="6" height="18" rx="2" fill="#4A321F"/><rect x="140" y="92" width="6" height="18" rx="2" fill="#4A321F"/>
-    <rect x="10" y="76" width="142" height="16" rx="4" fill="#6B4A2E"/>
-    <rect x="14" y="64" width="134" height="16" rx="6" fill="#E6ECF1"/>
-    <ellipse cx="34" cy="60" rx="17" ry="7.5" fill="#FFFFFF" stroke="#D5DEE5"/>
-    <circle cx="176" cy="48" r="22" fill="#F0B866" opacity=".2"/>
-    <rect x="166" y="76" width="46" height="34" rx="3" fill="#8A6240"/>
-    <rect x="166" y="76" width="46" height="5" rx="2" fill="#9C7150"/>
-    <line x1="172" y1="93" x2="206" y2="93" stroke="#6E4C31" stroke-width="1.5"/><circle cx="189" cy="99" r="1.8" fill="#E2C08F"/>
-    <rect x="170" y="70" width="12" height="6" rx="2" fill="#5A3E2A"/><rect x="175" y="52" width="2.5" height="18" fill="#5A3E2A"/>
-    <path d="M165 54 L188 54 L183 40 L170 40 Z" fill="#F0B866" stroke="#C88F3A"/>
-    <g class="tableSpecs" stroke="#1A1A1A" stroke-width="1.5" fill="rgba(255,255,255,.35)"><circle cx="196" cy="71" r="3.6"/><circle cx="205" cy="71" r="3.6"/><path d="M199.6 71 h1.8 M192.4 71 l-2 -2 M208.6 71 l2 -2" fill="none"/></g>
-    
-  </svg>
-  <svg class="scene night front" viewBox="0 0 300 110" aria-hidden="true">
-    <path d="M56 57 Q102 49 148 59 L148 80 L56 80 Q49 69 56 57 Z" fill="#0A6C6A"/>
-    <path d="M56 57 Q102 49 148 59 L148 64 Q102 55 56 63 Z" fill="#E6ECF1" opacity=".9"/>
-    <path d="M80 66 Q100 70 120 66" stroke="#085957" stroke-width="2" fill="none" stroke-linecap="round"/>
-    
-  </svg>
-
-  <!-- day: beach chair under an umbrella -->
-  <svg class="scene day" viewBox="0 0 300 110" aria-hidden="true">
-    <ellipse cx="80" cy="110" rx="110" ry="9" fill="#F1DCA7"/>
-    <line x1="20" y1="110" x2="20" y2="38" stroke="#8B6A45" stroke-width="3"/>
-    <path d="M-14 46 Q20 2 54 46 Z" fill="#E2574C"/>
-    <path d="M3 46 Q20 2 20 4 Q20 2 37 46 Z" fill="#FFFFFF"/>
-    <path d="M-14 46 q8.5 6 17 0 q8.5 6 17 0 q8.5 6 17 0 q8.5 6 17 0" fill="#E2574C"/>
-    <line x1="42" y1="92" x2="34" y2="110" stroke="#A0743F" stroke-width="3" stroke-linecap="round"/>
-    <line x1="80" y1="92" x2="90" y2="110" stroke="#A0743F" stroke-width="3" stroke-linecap="round"/>
-    <line x1="30" y1="58" x2="44" y2="110" stroke="#A0743F" stroke-width="3" stroke-linecap="round"/>
-    <path d="M30 58 L42 92 L84 92" stroke="#2F8FB3" stroke-width="8" fill="none" stroke-linejoin="round"/>
-    <path d="M30 58 L42 92 L84 92" stroke="#FFFFFF" stroke-width="8" fill="none" stroke-dasharray="6 6" stroke-linejoin="round"/>
-    <rect x="104" y="94" width="10" height="14" rx="2" fill="#F7E3B5" stroke="#E0C48A"/>
-    <path d="M106 94 l3 -9" stroke="#E2574C" stroke-width="1.6" stroke-linecap="round"/>
-    <circle cx="108" cy="97" r="2.2" fill="#F0B866"/>
-  </svg>
-
-  <!-- sunset: a rock on a hill -->
-  <svg class="scene sunset" viewBox="0 0 300 110" aria-hidden="true">
-    <path d="M-12 110 L-12 66 Q46 30 120 58 Q190 86 268 110 Z" fill="#3E2140" opacity=".92"/>
-    <path d="M66 110 Q68 91 92 89 Q116 89 122 110 Z" fill="#6A5662"/>
-    <path d="M74 98 Q90 93 106 96" stroke="#5A4752" stroke-width="2" fill="none"/>
-    <path d="M40 110 l3 -9 l2 9 M48 110 l2 -7 l2 7 M134 110 l3 -8 l2 8 M142 110 l2 -6 l2 6" stroke="#2A1530" stroke-width="1.6" fill="none"/>
-  </svg>
-
-  <div class="flyspecs" id="flyspecs" aria-hidden="true"><svg viewBox="0 0 24 10"><circle cx="6" cy="5" r="4"/><circle cx="18" cy="5" r="4"/><path d="M10 5 h4" fill="none"/></svg></div>
-  <div class="courier" id="courier">
-    <div class="bubble hide" id="bubble" role="status">
-      <button type="button" class="x" id="bubbleX" aria-label="Hide message">×</button>
-      <span id="bubbleText"></span>
-      <button type="button" class="act" id="bubbleBtn" hidden>Write a message</button>
-    </div>
-    <div class="zzz" aria-hidden="true"><span>z</span><span>z</span><span>Z</span></div>
-    <div class="flip">
-    <svg class="dude" viewBox="0 0 80 124" aria-hidden="true">
-      <ellipse class="shadow" cx="40" cy="119" rx="20" ry="3.5"/>
-      <g class="legL"><rect x="31" y="84" width="8" height="26" rx="4" fill="#1F3A5F"/><rect x="29" y="106" width="12" height="7" rx="3.5" fill="#2B2B2B"/></g>
-      <g class="legR"><rect x="41" y="84" width="8" height="26" rx="4" fill="#1F3A5F"/><rect x="39" y="106" width="12" height="7" rx="3.5" fill="#2B2B2B"/></g>
-      <g class="bodyG">
-        <path d="M33 54 L58 86" stroke="#7A4A16" stroke-width="3"/>
-        <rect x="24" y="52" width="32" height="38" rx="12" fill="#0A6C6A"/>
-        <rect x="50" y="78" width="16" height="13" rx="3" fill="#C8892E"/><rect x="50" y="78" width="16" height="5" rx="2" fill="#A86F1F"/>
-        <g class="armB"><rect x="24" y="56" width="8" height="24" rx="4" fill="#08595A"/></g>
-        <g class="head">
-          <circle cx="40" cy="34" r="18" fill="#F2C29A"/>
-          <path d="M22 30 Q23 14 40 14 Q57 14 58 30 Z" fill="#0A6C6A"/>
-          <rect x="40" y="27" width="22" height="5" rx="2.5" fill="#08595A"/>
-          <circle cx="40" cy="17" r="2.5" fill="#F0B866"/>
-          <g class="eyes"><ellipse cx="34" cy="37" rx="2.4" ry="3" fill="#1A1A1A"/><ellipse cx="46" cy="37" rx="2.4" ry="3" fill="#1A1A1A"/></g>
-          <g class="eyesClosed" stroke="#1A1A1A" stroke-width="1.8" fill="none" stroke-linecap="round"><path d="M31 37 q3 2.5 6 0"/><path d="M43 37 q3 2.5 6 0"/></g>
-          <circle cx="30" cy="43" r="2.6" fill="#F29C8C" opacity=".7"/><circle cx="50" cy="43" r="2.6" fill="#F29C8C" opacity=".7"/>
-          <path d="M35 44 Q40 49 45 44" stroke="#7A3B2A" stroke-width="2" fill="none" stroke-linecap="round"/>
-          <g class="specs" stroke="#1A1A1A" stroke-width="1.6" fill="rgba(255,255,255,.25)"><circle cx="34" cy="37" r="5"/><circle cx="46" cy="37" r="5"/><path d="M39 37 h2" fill="none"/></g>
-          <g class="shades"><rect x="28" y="33" width="11" height="8" rx="3" fill="#15202B"/><rect x="41" y="33" width="11" height="8" rx="3" fill="#15202B"/><path d="M39 35.5 h2" stroke="#15202B" stroke-width="1.8"/><path d="M30 35 h4" stroke="#FFFFFF" stroke-width="1.2" opacity=".6" stroke-linecap="round"/></g>
-        </g>
-        <g class="armF">
-          <rect x="48" y="56" width="8" height="24" rx="4" fill="#0A6C6A"/>
-          <g class="envelope"><rect x="47" y="76" width="18" height="12" rx="1.5" fill="#FFFFFF" stroke="#C9D3DA"/><path d="M47.5 76.5 L56 83 L64.5 76.5" stroke="#9AA9B4" fill="none"/></g>
-        </g>
-      </g>
-    </svg>
-    </div>
-  </div>
-</section>
-
-<footer><div class="wrap"><span>© 2026 Tarun Sharma</span><span>India</span></div></footer>
-
-<script>
-
-
-/* scroll progress */
-(function(){
-  var bar=document.getElementById('progress');
-  function upd(){var h=document.documentElement; var max=h.scrollHeight-h.clientHeight; bar.style.width=(max>0? (h.scrollTop/max*100):0)+'%'}
-  addEventListener('scroll',upd,{passive:true}); upd();
-})();
-
-/* project filters */
-(function(){
-  var btns=document.querySelectorAll('.filters button'), cards=document.querySelectorAll('.work .card');
-  btns.forEach(function(b){b.addEventListener('click',function(){
-    btns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
-    var f=b.dataset.f;
-    cards.forEach(function(c){c.hidden = f!=='all' && (' '+c.dataset.cat+' ').indexOf(' '+f+' ')<0});
-  })});
-})();
-
-/* query console */
-(function(){
-  var K='<span class="kw">', S='<span class="str">', E='</span>';
-  var Q={
-    profile:{q:K+'SELECT'+E+' Name, Title__c, Experience_Years__c,\n       Clouds__c, Certifications__c\n'+K+'FROM'+E+'   Developer__c\n'+K+'WHERE'+E+'  Name = '+S+"'Tarun Sharma'"+E+'\n'+K+'LIMIT'+E+'  1',
-      h:['Name','Years','Clouds','Certs'], r:[['Tarun Sharma','4+','FSC; Sales; Service; Commerce; Experience','5']]},
-    clouds:{q:K+'SELECT'+E+' Cloud__c, Status__c\n'+K+'FROM'+E+'   Cloud_Experience__c\n'+K+'WHERE'+E+'  Developer__r.Name = '+S+"'Tarun Sharma'"+E+'\n'+K+'ORDER BY'+E+' Status__c',
-      h:['Cloud','Status'], r:[['Financial Services Cloud','Current'],['Commerce Cloud','Delivered'],['Sales Cloud','Delivered'],['Service Cloud','Delivered'],['Experience Cloud','Delivered']]},
-    certs:{q:K+'SELECT'+E+' Name, Issuer__c\n'+K+'FROM'+E+'   Certification__c\n'+K+'WHERE'+E+'  Status__c = '+S+"'Active'"+E,
-      h:['Certification','Issued'], r:[['Platform Developer','Jun 2025'],['Agentforce Specialist','Dec 2025'],['MuleSoft Developer','Jan 2026'],['JavaScript Developer','Nov 2025'],['Platform Administrator','Feb 2021']]},
-    apis:{q:K+'SELECT'+E+' System__c, Pattern__c\n'+K+'FROM'+E+'   Integration__c\n'+K+'WHERE'+E+'  Built_By__c = '+S+"'Tarun Sharma'"+E,
-      h:['System','Pattern'], r:[['Kafka','Event streaming'],['Shopify','REST API'],['Stripe','REST API'],['Avalara','REST API'],['Google Drive','REST API'],['MuleSoft','API-led']]}
-  };
-  var tabs=document.querySelectorAll('.qtabs button'), pre=document.getElementById('qtext'), res=document.getElementById('qresult'), cur='profile';
-  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
-  var typingToken=0, reduceMo=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  function render(k){
-    var d=Q[k], token=++typingToken;
-    var tmp=document.createElement('div'); tmp.innerHTML=d.q; var plain=tmp.textContent;
-    function showRows(){'<table><thead><tr>'+d.h.map(function(x){return '<th>'+esc(x)+'</th>'}).join('')+'</tr></thead><tbody>'+
-      d.r.map(function(row){return '<tr>'+row.map(function(c){return '<td>'+esc(c)+'</td>'}).join('')+'</tr>'}).join('')+
-      '</tbody><tfoot><tr><td colspan="'+d.h.length+'">Query Results · Total Rows: '+d.r.length+'</td></tr></tfoot></table>';
-    res.classList.remove('fresh'); res.innerHTML=html; void res.offsetWidth; res.classList.add('fresh');
-    }
-    if(reduceMo){pre.innerHTML=d.q;showRows();return}
-    res.innerHTML='<div class="running">Executing query…</div>';
-    var i=0;
-    (function tick(){
-      if(token!==typingToken) return;
-      i=Math.min(plain.length,i+2);
-      pre.innerHTML=esc(plain.slice(0,i))+'<span class="caret"></span>';
-      if(i<plain.length) setTimeout(tick,16);
-      else {pre.innerHTML=d.q+'<span class="caret idle"></span>';setTimeout(function(){if(token===typingToken) showRows()},260)}
-    })();
-  }
-  tabs.forEach(function(b){b.addEventListener('click',function(){
-    tabs.forEach(function(x){x.setAttribute('aria-selected',x===b?'true':'false')});
-    cur=b.dataset.q; render(cur);
-  })});
-  document.getElementById('runBtn').addEventListener('click',function(){render(cur)});
-})();
-
-/* contact assistant: collects an enquiry and sends it via Web3Forms */
-(function(){
-  var WEB3FORMS_KEY = "b83d4cba-2e1b-47c9-be3f-9daa29274351";
-  var log=document.getElementById('chatLog'), box=document.getElementById('chatInput');
-  var data={topic:'',name:'',company:'',message:'',email:''};
-  function add(text,who){var d=document.createElement('div');d.className='msg '+who;d.textContent=text;log.appendChild(d);log.scrollTop=log.scrollHeight;return d}
-  function bot(text,next){var t=add('typing…','bot typing');setTimeout(function(){t.remove();add(text,'bot');if(next)next()},500)}
-  function ask(opts){
-    box.innerHTML='';
-    var f=document.createElement('form'), el=document.createElement(opts.multi?'textarea':'input');
-    el.id='chatField'; el.setAttribute('aria-label',opts.label); el.placeholder=opts.placeholder||'';
-    if(opts.multi) el.rows=3; else el.type=opts.type||'text';
-    var send=document.createElement('button'); send.type='submit'; send.className='send'; send.textContent='Send';
-    f.appendChild(el); f.appendChild(send); box.appendChild(f);
-    if(opts.skip){var s=document.createElement('button');s.type='button';s.className='ghost';s.textContent='Skip';s.style.marginTop='8px';
-      s.onclick=function(){add('Skipped','me');opts.done('')};box.appendChild(s)}
-    var err=document.createElement('div'); err.className='err'; box.appendChild(err);
-    el.focus({preventScroll:true});
-    if(opts.multi) el.addEventListener('keydown',function(e){if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();f.requestSubmit()}});
-    f.addEventListener('submit',function(e){e.preventDefault();var v=el.value.trim();
-      var problem=opts.validate?opts.validate(v):(!v?'Please type an answer first.':'');
-      if(problem){err.textContent=problem;return}
-      add(v,'me'); opts.done(v)});
-  }
-  function choices(list,done){
-    box.innerHTML='';var c=document.createElement('div');c.className='choices';
-    list.forEach(function(item){var b=document.createElement('button');b.type='button';b.textContent=item.label;b.onclick=function(){add(item.label,'me');done(item.value)};c.appendChild(b)});
-    box.appendChild(c);
-  }
-  function start(topic){
-    data.topic=topic;
-    if(window.courier) window.courier.wake('Nice! Take your time, I will wait right here.');
-    bot('Great. What is your name?',function(){ask({label:'Your name',placeholder:'Your name',done:function(v){data.name=v;
-      if(topic==='Job opportunity'||topic==='Freelance or project work'){
-        bot('Thanks, '+v.split(' ')[0]+'. Which company or team are you with?',function(){ask({label:'Company',placeholder:'Company (optional)',skip:true,validate:function(){return ''},done:function(c){data.company=c;askDetails()}})});
-      } else askDetails();
-    }})});
-  }
-  function askDetails(){
-    var prompt={'Job opportunity':'Tell me about the role: title, location or remote, and anything else Tarun should know.',
-      'Freelance or project work':'What is the project? A line or two on scope and timeline helps.',
-      'Salesforce question or collaboration':'What would you like to ask or work on together?',
-      'Just saying hi':'Go ahead, what would you like to tell Tarun?'}[data.topic];
-    bot(prompt,function(){ask({label:'Your message',placeholder:'Type your message',multi:true,done:function(v){data.message=v;askEmail()}})});
-  }
-  function askEmail(){
-    bot('Which email should Tarun reply to?',function(){ask({label:'Your email',type:'email',placeholder:'you@company.com',
-      validate:function(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)?'':'That email does not look right. Please check it.'},
-      done:function(v){data.email=v;confirmSend()}})});
-  }
-  function confirmSend(){
-    var summary='Here is what I will send:\n\nTopic: '+data.topic+'\nName: '+data.name+(data.company?'\nCompany: '+data.company:'')+'\nEmail: '+data.email+'\n\n'+data.message;
-    bot(summary,function(){choices([{label:'Send to Tarun',value:'send'},{label:'Start over',value:'restart'}],function(v){
-      if(v==='restart'){reset();}
-      else send();
-    })});
-  }
-  function send(){
-    box.innerHTML='';
-    var t=add('Sending…','bot typing');
-    if(WEB3FORMS_KEY.indexOf('PASTE_')===0){t.remove();bot('This preview is not connected to email yet, so nothing was sent. Please reach Tarun on LinkedIn for now.');return}
-    fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({access_key:WEB3FORMS_KEY,subject:'Portfolio enquiry: '+data.topic+' from '+data.name,from_name:'Portfolio assistant',
-        name:data.name,email:data.email,company:data.company||'-',topic:data.topic,message:data.message,botcheck:''})})
-    .then(function(r){return r.json().catch(function(){return {success:false,message:'HTTP '+r.status}})}).then(function(res){t.remove();
-      if(res.success){add('Sent! Tarun will reply to '+data.email+' soon.','bot');celebrate();}
-      else {console.warn('Web3Forms:',res);bot('Sorry, the message did not go through'+(res&&res.message?' ('+res.message+')':'')+'. Please try again in a minute or message Tarun on LinkedIn.',function(){choices([{label:'Try again',value:1}],send)});}
-    }).catch(function(){t.remove();bot('I could not reach the mail service. Check your connection and try again, or message Tarun on LinkedIn.',function(){choices([{label:'Try again',value:1}],send)})});
-  }
-
-  function reset(){
-    if(window.courier) window.courier.home();
-    log.innerHTML='';data={topic:'',name:'',company:'',message:'',email:''};
-    add('Hi! I pass messages on to Tarun. What brings you here?','bot');showTopics();
-  }
-  window.portfolioChat={reset:function(){reset()}};
-  function afterSend(){
-    box.innerHTML='';var c=document.createElement('div');c.className='choices';
-    var b=document.createElement('button');b.type='button';b.textContent='Send another message';b.onclick=reset;c.appendChild(b);box.appendChild(c);
-  }
-  function celebrate(){
-    var chat=document.getElementById('chat'), first=data.name.split(' ')[0];
-    afterSend();
-    if(window.courier) window.courier.deliver(first);
-    var o=document.createElement('div');o.className='sent';o.setAttribute('role','status');
-    o.innerHTML='<canvas></canvas><div class="tick"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>'+
-      '<h3></h3><p>Tarun will reply to <b></b>, usually within a day or two.</p>'+
-      '<div class="actions"><button type="button" class="again">Send another message</button><button type="button" class="close">Close</button></div>';
-    o.querySelector('h3').textContent='Thanks, '+first+'! Your message is on its way to Tarun Sharma.';
-    o.querySelector('b').textContent=data.email;
-    chat.appendChild(o);
-    o.querySelector('.again').onclick=function(){o.remove();reset()};
-    o.querySelector('.close').onclick=function(){o.remove()};
-    if(!matchMedia('(prefers-reduced-motion: reduce)').matches) confetti(o.querySelector('canvas'));
-  }
-  function confetti(cv){
-    var ctx=cv.getContext('2d'), dpr=window.devicePixelRatio||1, W=cv.offsetWidth, H=cv.offsetHeight;
-    cv.width=W*dpr; cv.height=H*dpr; ctx.scale(dpr,dpr);
-    var colors=['#6FD3C7','#F0B866','#E3EBF0','#4DC2B6','#E2A24A'], parts=[];
-    for(var i=0;i<110;i++){parts.push({x:W/2,y:H*0.38,vx:(Math.random()-.5)*9,vy:-Math.random()*9-3,r:Math.random()*4+3,
-      c:colors[i%colors.length],a:Math.random()*Math.PI,va:(Math.random()-.5)*.3,life:0})}
-    var start=performance.now();
-    (function frame(now){
-      var tt=now-start; ctx.clearRect(0,0,W,H);
-      parts.forEach(function(p){p.vy+=.22;p.vx*=.99;p.x+=p.vx;p.y+=p.vy;p.a+=p.va;
-        ctx.save();ctx.globalAlpha=Math.max(0,1-tt/2200);ctx.translate(p.x,p.y);ctx.rotate(p.a);ctx.fillStyle=p.c;ctx.fillRect(-p.r/2,-p.r/4,p.r,p.r/2);ctx.restore()});
-      if(tt<2200) requestAnimationFrame(frame); else ctx.clearRect(0,0,W,H);
-    })(start);
-  }
-  function showTopics(){
-    choices([{label:'Job opportunity',value:'Job opportunity'},{label:'Freelance / project',value:'Freelance or project work'},
-      {label:'Salesforce question',value:'Salesforce question or collaboration'},{label:'Just saying hi',value:'Just saying hi'}],start);
-  }
-  box.querySelectorAll('[data-topic]').forEach(function(b){b.onclick=function(){add(b.textContent,'me');start(b.dataset.topic)}});
-})();
-
-/* courier: rests in a time-of-day scene, wakes up to take a message, delivers it, then rests again */
-(function(){
-  var lane=document.getElementById('lane'), c=document.getElementById('courier'),
-      bubble=document.getElementById('bubble'), txt=document.getElementById('bubbleText'), btn=document.getElementById('bubbleBtn');
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var REST={night:28,day:26,sunset:54}, READY={night:112,day:110,sunset:130};
-  var fly=document.getElementById('flyspecs');
-  var REST_LINE={
-    night:['Zzz... Tarun’s courier is fast asleep. Need to send Tarun a message?','Wake me up'],
-    day:['Soaking up the sun. Need something delivered to Tarun?','Write a message'],
-    sunset:['Just watching the sunset. Want me to carry a message to Tarun?','Write a message']};
-  var BACK_LINE={night:'Let me sleep now... Zzz',day:'Back to my sun lounger.',sunset:'Back to the sunset view.'};
-  var scene='day', state='rest', busy=false, action='write', x=0, restTimer=null, hideTimer=null, idleTimer=null;
-
-  function setX(nx,secs){x=nx;c.style.transition=secs?'transform '+secs+'s linear':'none';c.style.transform='translateX('+nx+'px)';placeBubble()}
-  function walkTo(nx,done){
-    if(reduce){setX(nx,0);done&&done();return}
-    var secs=Math.max(.2,Math.abs(nx-x)/120);
-    c.classList.toggle('left',nx<x); c.classList.add('walking'); setX(nx,secs);
-    setTimeout(function(){c.classList.remove('walking','left');done&&done()},secs*1000+40);
-  }
-  function pose(p){c.classList.remove('sit','lie');if(p)c.classList.add(p)}
-  function wave(){c.classList.remove('waving');void c.offsetWidth;c.classList.add('waving')}
-  function placeBubble(){
-    var w=bubble.offsetWidth||240, maxLeft=window.innerWidth-16-w-x, left=Math.min(-6,maxLeft);
-    bubble.style.left=left+'px'; bubble.style.setProperty('--tail',Math.max(14,Math.min(w-30,24-left))+'px');
-  }
-  function say(text,label,act,autoHide){
-    clearTimeout(hideTimer);
-    txt.textContent=text;
-    if(label){btn.textContent=label;btn.hidden=false;action=act||'write'}else btn.hidden=true;
-    bubble.classList.remove('hide'); placeBubble();
-    if(autoHide) hideTimer=setTimeout(function(){bubble.classList.add('hide')},autoHide);
-  }
-  function restLook(){
-    pose(scene==='night'?'lie':'sit');
-    c.classList.toggle('shades',scene==='day');
-    c.classList.remove('specs','carrying'); lane.classList.remove('specs-on');
-  }
-  function goContact(){
-    var s=document.getElementById('contact'); s.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
-    setTimeout(function(){var b=document.querySelector('#chatInput button, #chatInput input, #chatInput textarea');if(b)b.focus({preventScroll:true})},600);
-  }
-
-  /* specs travel between the bedside table and his face */
-  function tablePos(){return 'translate(164px,-36px) scale(.85)'}
-  function facePos(){return 'translate('+(x+23)+'px,-66px) scale(1.05)'}
-  function specsToFace(done){
-    if(reduce){lane.classList.add('specs-on');c.classList.add('specs');done&&done();return}
-    c.classList.add('reach');
-    setTimeout(function(){
-      fly.style.transition='none'; fly.style.transform=tablePos(); fly.classList.add('on'); lane.classList.add('specs-on');
-      void fly.offsetWidth; fly.style.transition='';
-      c.classList.remove('reach'); c.classList.add('lift');
-      fly.style.transform=facePos();
-      setTimeout(function(){
-        fly.classList.remove('on'); c.classList.add('specs');
-        setTimeout(function(){c.classList.remove('lift');done&&done()},250);
-      },680);
-    },420);
-  }
-  function specsToTable(done){
-    if(reduce){c.classList.remove('specs');lane.classList.remove('specs-on');done&&done();return}
-    c.classList.add('lift');
-    setTimeout(function(){
-      fly.style.transition='none'; fly.style.transform=facePos(); fly.classList.add('on'); c.classList.remove('specs');
-      void fly.offsetWidth; fly.style.transition='';
-      c.classList.remove('lift'); c.classList.add('reach');
-      fly.style.transform=tablePos();
-      setTimeout(function(){
-        fly.classList.remove('on'); lane.classList.remove('specs-on');
-        setTimeout(function(){c.classList.remove('reach');done&&done()},250);
-      },680);
-    },380);
-  }
-
-  function setScene(s){
-    scene=s; lane.dataset.scene=s;
-    if(busy) return;
-    clearTimeout(restTimer); state='rest';
-    c.classList.remove('walking','left','carrying');
-    setX(REST[s],0); restLook();
-    say(REST_LINE[s][0],REST_LINE[s][1],'write',10000);
-  }
-
-  function wake(line,cb){
-    clearTimeout(restTimer);
-    if(state==='awake'){ if(line) say(line,null,null,6000); cb&&cb(); return }
-    if(busy) return;
-    busy=true; state='waking';
-    var ready=function(msg){busy=false;state='awake';say(msg,'Write a message','write',15000);armIdle();cb&&cb()};
-    if(scene==='night'){
-      say('Mmm... who is it?');
-      setTimeout(function(){
-        c.classList.add('fade');
-        setTimeout(function(){
-          pose(null); setX(READY.night,0); c.classList.remove('fade');
-          setTimeout(function(){
-            say('Where are my specs...');
-            specsToFace(function(){ready('Specs on. Okay, I’m up! '+(line||'What should I carry to Tarun?'))});
-          },500);
-        },280);
-      },900);
-    } else {
-      say(scene==='day'?'Oh, a delivery? Sure!':'One sec, the sunset can wait.');
-      setTimeout(function(){
-        pose(null);
-        setTimeout(function(){walkTo(READY[scene],function(){ready(line||'Ready! What should I carry to Tarun?')})},350);
-      },800);
-    }
-  }
-
-  function goRest(){
-    if(busy||state!=='awake') return;
-    busy=true; clearTimeout(restTimer); clearTimeout(idleTimer);
-    say(BACK_LINE[scene]);
-    function back(){
-      walkTo(REST[scene],function(){
-        restLook(); busy=false; state='rest';
-        hideTimer=setTimeout(function(){bubble.classList.add('hide')},3500);
-      });
-    }
-    if(scene==='night'){
-      var step=function(){ if(Math.abs(x-READY.night)>2){walkTo(READY.night,function(){specsToTable(function(){setTimeout(back,300)})})} else specsToTable(function(){setTimeout(back,300)}) };
-      setTimeout(step,900);
-    } else setTimeout(back,1200);
-  }
-
-  function deliver(name){
-    function go(){
-      busy=true; clearTimeout(idleTimer); c.classList.add('carrying');
-      say('Got it'+(name?', '+name:'')+'! Delivering your message to Tarun now...');
-      setTimeout(function(){
-        bubble.classList.add('hide');
-        walkTo(lane.offsetWidth+100,function(){
-          c.classList.remove('carrying'); setX(-110,0);
-          setTimeout(function(){
-            walkTo(READY[scene],function(){
-              busy=false; state='awake'; wave();
-              say('Delivered! Tarun has your message. Want to send another one?','Send another','again');
-              restTimer=setTimeout(goRest,8000);
-            });
-          },700);
-        });
-      },1500);
-    }
-    if(state==='awake') go(); else wake(null,go);
-  }
-
-  /* go back to rest after a long quiet spell */
-  function armIdle(){clearTimeout(idleTimer);idleTimer=setTimeout(function(){if(state==='awake'&&!busy) goRest()},90000)}
-  ['scroll','keydown','pointerdown'].forEach(function(ev){addEventListener(ev,function(){if(state==='awake')armIdle()},{passive:true})});
-
-  btn.addEventListener('click',function(){
-    if(action==='again'){clearTimeout(restTimer);if(window.portfolioChat) window.portfolioChat.reset();goContact();return}
-    wake(null,goContact);
-  });
-  document.getElementById('bubbleX').addEventListener('click',function(e){e.stopPropagation();bubble.classList.add('hide')});
-  c.querySelector('.flip').addEventListener('click',function(){
-    if(busy) return;
-    if(state==='rest'){ say(REST_LINE[scene][0],REST_LINE[scene][1],'write',12000) }
-    else { wave(); say('Want to send Tarun a message? I will carry it for you.','Write a message','write',12000) }
-  });
-  addEventListener('resize',function(){if(!busy) setX(state==='rest'?REST[scene]:READY[scene],0)});
-
-  window.courier={
-    wake:function(line){wake(line)},
-    deliver:deliver,
-    setScene:setScene,
-    home:function(){if(state==='awake'&&!busy){clearTimeout(restTimer);say('Ready when you are. What should I carry to Tarun?',null,null,6000)}},
-    say:function(t){if(!busy) say(t,null,null,6000)}
-  };
-})();
-
-/* sky: pick day, sunset or night from the visitor's clock; the round button cycles through them */
-(function(){
-  var sky=document.getElementById('sky'), root=document.documentElement, btn=document.getElementById('themeBtn'), icon=document.getElementById('themeIcon');
-  var ICONS={
-    day:'<circle cx="12" cy="12" r="4.5"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4L6 18M18 6l1.4-1.4"/>',
-    sunset:'<path d="M3 18h18M6.5 18a5.5 5.5 0 0 1 11 0M12 6v2.5M5 10.5l1.6 1.6M19 10.5l-1.6 1.6M8 21h8"/>',
-    night:'<path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>'};
-  var LABEL={day:'Day sky',sunset:'Sunset sky',night:'Night sky'};
-  var order=['day','sunset','night'];
-  var stars=document.getElementById('stars');
-  for(var i=0;i<110;i++){var s=document.createElement('i');s.className='star'+(Math.random()<.12?' big':'');
-    s.style.left=(Math.random()*100)+'%';s.style.top=(Math.random()*72)+'%';
-    s.style.setProperty('--d',(2+Math.random()*3).toFixed(2)+'s');s.style.setProperty('--dl',(-Math.random()*4).toFixed(2)+'s');stars.appendChild(s)}
-  function auto(){var h=new Date().getHours();return h>=6&&h<17?'day':(h>=17&&h<19?'sunset':'night')}
-  function apply(s){
-    sky.dataset.scene=s; root.dataset.theme=(s==='night'?'dark':'light');
-    icon.innerHTML=ICONS[s]; btn.setAttribute('aria-label',LABEL[s]+'. Tap to change the sky'); btn.title=LABEL[s];
-    if(window.courier) window.courier.setScene(s);
-  }
-  var cur=auto(); apply(cur);
-  btn.addEventListener('click',function(){cur=order[(order.indexOf(cur)+1)%order.length];apply(cur)});
-})();
-
-/* count-up stats and skill-portal envelope flow, triggered when scrolled into view */
-(function(){
-  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if(reduce||!('IntersectionObserver' in window)) return;
-  var strip=document.getElementById('strip');
-  var nums=[].map.call(strip.querySelectorAll('b'),function(b){var m=b.textContent.match(/^(\d+)(.*)$/);return {el:b,n:+m[1],suf:m[2]}});
-  var counted=false;
-  new IntersectionObserver(function(es,o){es.forEach(function(e){
-    if(!e.isIntersecting||counted) return; counted=true; o.disconnect();
-    var t0=performance.now(), dur=1200;
-    (function f(now){var p=Math.min(1,(now-t0)/dur), k=1-Math.pow(1-p,3);
-      nums.forEach(function(x){x.el.textContent=Math.round(x.n*k)+x.suf});
-      if(p<1) requestAnimationFrame(f)})(t0);
-  })},{threshold:.6}).observe(strip);
-
-  var chain=document.querySelector('.chain');
-  if(chain){
-    var steps=chain.querySelectorAll('li'), running=false;
-    function play(){
-      if(running) return; running=true;
-      steps.forEach(function(s){s.classList.remove('lit')});
-      steps.forEach(function(s,i){setTimeout(function(){s.classList.add('lit')},300+i*650)});
-      setTimeout(function(){running=false},300+steps.length*650+400);
-    }
-    new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting) play()})},{threshold:.6}).observe(chain);
-  }
-})();
-</script>
-
 </body>
 </html>
